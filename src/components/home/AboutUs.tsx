@@ -55,9 +55,9 @@ export default function AboutUs() {
           {/* Card 1 */}
           <div className="relative rounded-xl overflow-hidden shadow-lg">
             <img
-              src="/test.png"
+              src="/aboutus_hero_img1.jpg"
               alt="Farmhouse"
-              className="w-full h-64 object-cover"
+              className="w-full h-72 object-cover"
             />
             <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-6">
               <h3 className="text-lg font-semibold">
@@ -78,9 +78,9 @@ export default function AboutUs() {
           {/* Card 2 */}
           <div className="relative rounded-xl overflow-hidden shadow-lg">
             <img
-              src="/test.png"
+              src="/aboutus_hero_img2.jpg"
               alt="Landscape"
-              className="w-full h-64 object-cover"
+              className="w-full h-72 object-cover"
             />
             <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-6">
               <h3 className="text-lg font-semibold">Law. Lifestyle. Legacy.</h3>

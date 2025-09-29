@@ -28,12 +28,10 @@ body {
 
 * {
   box-sizing: border-box;
-  margin: 0;
 }
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 
@@ -44,11 +42,11 @@ a {
 }
 
 .container_section-white{
-  @apply w-full bg-[#FBF0D9] text-[#0F3714] ;
+  @apply w-full bg-[#FBF0D9] text-[#0F3714] py-6;
 }
 
 .container_content{
-  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 overflow-hidden;
 
 }
 

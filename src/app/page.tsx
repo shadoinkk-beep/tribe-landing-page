@@ -8,17 +8,17 @@ import ProjectHero from "@/components/projects/ProjectsHero";
 export const metadata = {
   title: "Luxury Real Estate Properties in India",
   description:
-    "Discover premium real estate projects, villas, and apartments across India with DreamHomes Realty.",
+    "Discover premium farmhouses projects across India with Tribe Group.",
   openGraph: {
     title: "Luxury Real Estate Properties in India",
-    description: "Find your dream property with DreamHomes Realty.",
-    url: "https://dreamhomes.com",
+    description: "Find your dream property with Tribe Group.",
+    url: "https://tribegroup.in",
     images: [
       {
-        url: "https://dreamhomes.com/og/home.jpg",
+        url: "https://tribegroup.in/HeroMainBg.png",
         width: 1200,
         height: 630,
-        alt: "DreamHomes Realty",
+        alt: "Tribe Group",
       },
     ],
     type: "website",

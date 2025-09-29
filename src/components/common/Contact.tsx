@@ -1,5 +1,6 @@
 // src/components/ContactForm.tsx
-import { ArrowRight } from "lucide-react";
+
+import { BsArrowRight } from "react-icons/bs";
 
 export default function ContactForm() {
   return (
@@ -79,7 +80,7 @@ export default function ContactForm() {
               type="submit"
               className="w-full flex items-center justify-center gap-2 px-8 py-3 border border-white rounded-md hover:bg-white/20 transition"
             >
-              Submit your query <ArrowRight className="w-5 h-5" />
+              Submit your query <BsArrowRight className="w-5 h-5" />
             </button>
           </div>
         </form>

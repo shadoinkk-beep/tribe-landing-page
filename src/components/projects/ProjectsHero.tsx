@@ -22,7 +22,7 @@ export default function ProjectHero() {
               Lifestyle
               <span className="rounded-full overflow-hidden w-64 h-18 sm:mx-8">
                 <Image
-                  src="/test.png"
+                  src="/textImageSmall.png"
                   alt="Farmhouse"
                   width={128}
                   height={48}
@@ -37,7 +37,7 @@ export default function ProjectHero() {
           </p>
 
           <div className="grid gap-6 sm:flex justify-between items-center">
-            <p className="text-gray-200 max-w-md text-left mx-auto text-sm md:text-base">
+            <p className="text-gray-200 max-w-md text-left text-sm md:text-base">
               TRIBE is India’s first integrated farmhouse ecosystem, built to
               remove the risks that collapse most land deals. By uniting legal
               due diligence, luxury development,
@@ -77,7 +77,7 @@ export default function ProjectHero() {
             className="overflow-hidden text-green-900 grid gap-4"
           >
             <Image
-              src="/test.png"
+              src="/Ananata-Farm-Main.png"
               alt="Ananta Farms"
               width={800}
               height={500}
@@ -101,7 +101,7 @@ export default function ProjectHero() {
             className="overflow-hidden text-green-900 grid gap-4"
           >
             <Image
-              src="/test.png"
+              src="/Whispering-woods-main.png"
               alt="Whispering Woods"
               width={800}
               height={500}

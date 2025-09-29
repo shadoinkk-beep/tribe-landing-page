@@ -3,6 +3,9 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { GrDocumentVerified } from "react-icons/gr";
+import { MdOnlinePrediction } from "react-icons/md";
+import { PiCreditCard } from "react-icons/pi";
 
 type Feature = {
   title: string;
@@ -59,10 +62,10 @@ export default function Features() {
       </div>
 
       {/* Cards Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-9 gap-8">
         {/* Row 1 */}
         <motion.div
-          className="md:col-span-3 bg-green-900 text-white rounded-2xl overflow-hidden shadow-md relative h-96"
+          className="md:col-span-5 bg-green-900 text-white rounded-2xl overflow-hidden shadow-md relative h-96"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -71,7 +74,7 @@ export default function Features() {
           {/* Image Background */}
           <div className="relative h-full w-full">
             <Image
-              src={"/test.png"}
+              src={"/Features_bg_1.png"}
               alt={features[0].title}
               fill
               className="object-cover"
@@ -89,15 +92,17 @@ export default function Features() {
         </motion.div>
 
         <motion.div
-          className="bg-green-900 text-white rounded-2xl p-6 shadow-md grid md:col-span-2"
+          className="bg-green-900 text-white rounded-2xl p-6 shadow-md grid md:col-span-4"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: false, amount: 0.2 }}
         > 
         <div className="grid self-end">
-
-          <h3 className="text-lg font-semibold mb-2">{features[1].title}</h3>
+          <div className="border border-[#F8DF7C] rounded-full h-18 w-18 flex justify-center items-center" >
+              <GrDocumentVerified className="h-6 w-6 text-white" />
+          </div>
+          <h3 className="text-lg font-semibold my-2">{features[1].title}</h3>
           <p className="text-sm mb-4 text-gray-200">{features[1].description}</p>
           <a href={features[1].link} className="text-sm text-teal-300 hover:underline">
             Know More →
@@ -107,7 +112,7 @@ export default function Features() {
 
         {/* Row 2 */}
         <motion.div
-          className="bg-green-900 text-white rounded-2xl p-6 shadow-md grid md:col-span-2"
+          className="bg-green-900 text-white rounded-2xl p-6 shadow-md grid md:col-span-4"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -115,7 +120,11 @@ export default function Features() {
         > 
         <div className="grid self-end">
 
-          <h3 className="text-lg font-semibold mb-2">{features[2].title}</h3>
+          <div className="border border-[#F8DF7C] rounded-full h-18 w-18 flex justify-center items-center" >
+              <MdOnlinePrediction className="h-8 w-8 text-white" />
+          </div>
+
+          <h3 className="text-lg font-semibold my-2">{features[2].title}</h3>
           <p className="text-sm mb-4 text-gray-200">{features[2].description}</p>
           <a href={features[2].link} className="text-sm text-teal-300 hover:underline">
             Know More →
@@ -124,7 +133,7 @@ export default function Features() {
         </motion.div>
 
         <motion.div
-          className="md:col-span-3 bg-green-900 text-white rounded-2xl overflow-hidden shadow-md relative h-96"
+          className="md:col-span-5 bg-green-900 text-white rounded-2xl overflow-hidden shadow-md relative h-96"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -132,14 +141,17 @@ export default function Features() {
         >
           <div className="relative h-full w-full">
             <Image
-              src={"/test.png"}
+              src={"/Features_bg_2.png"}
               alt={features[3].title}
               fill
               className="object-cover"
             />
             <div className="absolute grid content-end inset-0 bg-gradient-to-t from-black/70 to-transparent" >
           <div className="p-6">
-            <h3 className="text-lg font-semibold mb-2">{features[3].title}</h3>
+                      <div className="border border-[#F8DF7C] rounded-full h-18 w-18 flex justify-center items-center" >
+              <img src="/AlchemyLogo.png" alt="Alchemy Logo" />
+          </div>
+            <h3 className="text-lg font-semibold my-2">{features[3].title}</h3>
             <p className="text-sm mb-4 text-gray-200">{features[3].description}</p>
             <a href={features[3].link} className="text-sm text-teal-300 hover:underline">
               Know More →

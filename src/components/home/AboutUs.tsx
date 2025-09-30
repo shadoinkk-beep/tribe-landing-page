@@ -22,13 +22,13 @@ export default function AboutUs() {
           <div className="flex items-center justify-start">
             <div className="relative flex">
               {/* Circle 1 */}
-              <div className="w-50 h-50 sm:w-60 sm:h-60 rounded-full border border-white flex flex-col items-center justify-center text-left z-10 ">
+              <div className="w-40 h-40  md:w-50 md:h-50 sm:w-60 sm:h-60 rounded-full border border-white flex flex-col items-center justify-center text-left z-10 ">
                 <span className="text-3xl">500+</span>
                 <span className="text-sm mt-1">Acres of Land Acquired</span>
               </div>
 
               {/* Circle 2 (overlapping) */}
-              <div className="w-50 h-50 sm:w-60 sm:h-60 rounded-full border border-white flex flex-col items-center justify-center text-left !-ml-8 ">
+              <div className="w-40 h-40  md:w-50 md:h-50 sm:w-60 sm:h-60 rounded-full border border-white flex flex-col items-center justify-center text-left !-ml-8 ">
                 <span className="text-3xl">02+</span>
                 <span className="text-sm mt-1">Ongoing Projects</span>
               </div>

@@ -3,6 +3,7 @@ import Footer from "@/components/common/Footer";
 import AboutUs from "@/components/home/AboutUs";
 import FeatureHero from "@/components/home/FeaturesHero";
 import Hero from "@/components/home/Hero";
+import RisksCarousel from "@/components/home/RisksCarousel";
 import ProjectHero from "@/components/projects/ProjectsHero";
 
 export const metadata = {
@@ -31,6 +32,7 @@ export default function Home() {
 
     <>
     <Hero/>
+    <RisksCarousel/>
     <ProjectHero/>
     <FeatureHero/>
     <AboutUs/>

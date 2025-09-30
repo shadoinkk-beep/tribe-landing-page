@@ -4,7 +4,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 export default function ContactForm() {
   return (
-    <section className="container_section-white">
+    <section id="contact" className="container_section-white">
     <main
       className="container_content text-white"
       

@@ -47,9 +47,9 @@ export default function Features() {
   return (
     <section className="container_section-white">
 
-    <section className="container_content grid justify-center gap-8">
+    <section className="container_content grid  gap-8">
       {/* Section Header */}
-      <div className="max-w-6xl grid justify-center  gap-4 text-center mb-12">
+      <div className=" grid justify-center  gap-4 text-center mb-12">
         <h2 className="text-2xl md:text-3xl font-semibold text-green-900">
           We don’t just sell land parcels. <br />
           We secure law, lifestyle, and legacy for generations.
@@ -81,9 +81,12 @@ export default function Features() {
             />
             <div className="absolute grid content-end inset-0 bg-gradient-to-t from-black/70 to-transparent">
           <div className="p-6">
-            <h3 className="text-lg font-semibold mb-2">{features[0].title}</h3>
+            <div className="border border-[#F8DF7C] rounded-full h-18 w-18 flex justify-center items-center" >
+              <img src="/AlchemyLogo.png" alt="Alchemy Logo" />
+          </div>
+            <h3 className="text-lg font-semibold my-2">{features[0].title}</h3>
             <p className="text-sm mb-4 text-gray-200">{features[0].description}</p>
-            <a href={features[0].link} className="text-sm text-teal-300 hover:underline">
+            <a href={features[0].link} className="text-sm text-teal-300 underline underline-offset-4">
               Know More →
             </a>
           </div>
@@ -92,7 +95,7 @@ export default function Features() {
         </motion.div>
 
         <motion.div
-          className="bg-green-900 text-white rounded-2xl p-6 shadow-md grid md:col-span-4"
+          className="bg-green-900 text-white rounded-2xl p-6 shadow-md grid md:col-span-4 h-96"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -104,7 +107,7 @@ export default function Features() {
           </div>
           <h3 className="text-lg font-semibold my-2">{features[1].title}</h3>
           <p className="text-sm mb-4 text-gray-200">{features[1].description}</p>
-          <a href={features[1].link} className="text-sm text-teal-300 hover:underline">
+          <a href={features[1].link} className="text-sm text-teal-300 underline underline-offset-4">
             Know More →
           </a>
         </div>
@@ -112,7 +115,7 @@ export default function Features() {
 
         {/* Row 2 */}
         <motion.div
-          className="bg-green-900 text-white rounded-2xl p-6 shadow-md grid md:col-span-4"
+          className="bg-green-900 text-white rounded-2xl p-6 shadow-md grid md:col-span-4 h-96"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -126,7 +129,7 @@ export default function Features() {
 
           <h3 className="text-lg font-semibold my-2">{features[2].title}</h3>
           <p className="text-sm mb-4 text-gray-200">{features[2].description}</p>
-          <a href={features[2].link} className="text-sm text-teal-300 hover:underline">
+          <a href={features[2].link} className="text-sm text-teal-300 underline underline-offset-4">
             Know More →
           </a>
         </div>
@@ -153,7 +156,7 @@ export default function Features() {
           </div>
             <h3 className="text-lg font-semibold my-2">{features[3].title}</h3>
             <p className="text-sm mb-4 text-gray-200">{features[3].description}</p>
-            <a href={features[3].link} className="text-sm text-teal-300 hover:underline">
+            <a href={features[3].link} className="text-sm text-teal-300 underline underline-offset-4">
               Know More →
             </a>
           </div>

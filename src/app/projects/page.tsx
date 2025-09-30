@@ -20,7 +20,9 @@ export const metadata = {
 
 export default function Projects() {
   return (
-    <section className="p-10">
+    <section className="container_section-white">
+      <div className="container_content">
+
       <h2 className="text-3xl font-bold">Our Projects</h2>
       <ul className="mt-6 space-y-3">
         <li>
@@ -30,6 +32,7 @@ export default function Projects() {
           <a href="/projects/project-b">Project B – Premium Apartments</a>
         </li>
       </ul>
+      </div>
     </section>
   );
 }

@@ -13,7 +13,7 @@ export default function Footer() {
         {/* Left: Logo & About */}
         <div className="md:w-3/7 grid gap-6">
           <div className="flex items-center gap-2 mb-3">
-            <img src="./tribe_logo_text.png" className="h-16" alt="tribe logo" />
+            <img src="/tribe_logo_text.png" className="h-16" alt="tribe logo" />
           </div>
           <p className="text-sm text-gray-600 leading-relaxed max-w-md">
             Tribe is a pioneering luxury farmhouse development company in North India, 
@@ -69,7 +69,7 @@ export default function Footer() {
                 <CgPhone className="w-4 h-4" /> +91 70300 62277
               </li>
               <li className="flex items-start gap-2">
-                <FiMapPin className="w-8 h-8 -mt-0.5" />
+                <FiMapPin className="w-4 h-4 sm:w-8 sm:h-8 -mt-0.5" />
                 <span>
                   403, Baani Address One, Sector 56, Golf Course Road <br />
                   Gurugram, Haryana-122011

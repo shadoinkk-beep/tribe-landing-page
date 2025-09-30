@@ -21,12 +21,15 @@ export const metadata = {
 
 export default function About() {
   return (
-    <section className="p-10">
+    <section className="container_section-white">
+      <div className="container_content" >
+
       <h2 className="text-3xl font-bold">About Us</h2>
       <p className="mt-4">
         We’ve been helping families find their dream properties for over 10 years.
         At Tribe Group, we believe in quality, trust, and transparency.
       </p>
+      </div>
     </section>
   );
 }

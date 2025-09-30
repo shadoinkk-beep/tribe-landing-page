@@ -13,7 +13,7 @@ export default function Footer() {
         {/* Left: Logo & About */}
         <div className="md:w-3/7 grid gap-6">
           <div className="flex items-center gap-2 mb-3">
-            <img src="/tribe_logo_text.png" className="h-16" alt="tribe logo" />
+            <img src="/Tribe_logo_text.png" className="h-16" alt="tribe logo" />
           </div>
           <p className="text-sm text-gray-600 leading-relaxed max-w-md">
             Tribe is a pioneering luxury farmhouse development company in North India, 

@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <img
-            src="./tribe_logo_text.png"
+            src="/tribe_logo_text.png"
             alt="Tribe Logo"
             className="h-8"
           />

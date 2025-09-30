@@ -20,7 +20,7 @@ const features: Feature[] = [
     description:
       "Xcis is a farmhouse-only consulting partner that safeguards investors through compliance checks and due diligence. We de-risk land deals by verifying titles, approvals, and legal clearances before you invest.",
     link: "#",
-    img: "./house1.png",
+    img: "/house1.png",
   },
   {
     title: "Compliance Without Compromise",
@@ -39,7 +39,7 @@ const features: Feature[] = [
     description:
       "Alchemy Landbase develops luxury farmhouse communities with clear titles and full compliance. We deliver lifestyle-ready spaces designed for long-term security and legacy.",
     link: "#",
-    img: "./house2.png",
+    img: "/house2.png",
   },
 ];
 

@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /api/*
+
+# Host
+Host: https://tribegroup.in
+
+# Sitemaps
+Sitemap: https://tribegroup.in/sitemap.xml

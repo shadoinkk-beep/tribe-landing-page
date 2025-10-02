@@ -46,7 +46,7 @@ export default function ProjectHero() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="block px-12 py-3 bg-white text-green-900 rounded-xl shadow font-medium"
+              className="block px-12 py-3 bg-white text-green-900 rounded-xl shadow font-medium cursor-pointer"
             >
               Explore Projects
             </motion.button>
@@ -85,7 +85,7 @@ export default function ProjectHero() {
             />
             <div className="flex justify-between items-center text-white">
               <span>Ananta Farms</span>
-              <button className="px-6 py-1 border text-sm border-white">
+              <button className="px-6 py-1 border text-sm border-white cursor-pointer">
                 Explore
               </button>
             </div>
@@ -109,7 +109,7 @@ export default function ProjectHero() {
             />
             <div className="flex justify-between items-center text-white">
               <span>Whispering Woods</span>
-              <button className="px-6 py-1 border text-sm border-white">
+              <button className="px-6 py-1 border text-sm border-white cursor-pointer">
                 Explore
               </button>
             </div>

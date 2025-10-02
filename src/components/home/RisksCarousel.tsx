@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 type CardProps = {
   title: string;
@@ -13,12 +14,48 @@ type CardProps = {
 };
 
 const cards: CardProps[] = [
-  { title: "Fake Or Disputed Ownership", tag: "Fake Or Disputed Ownership", image: "/risks/1.png", description: "TRIBE verifies every title through layered legal due diligence, protecting you from fraud." },
-  { title: "Section 143/144 Restrictions", tag: "Section 143/144 Restrictions", image: "/risks/2.jpg", description: "We ensure only construction-ready plots enter our ecosystem—no hidden legal blocks." },
-  { title: "Endless 'Approvals in Process'", tag: "Endless 'Approvals in Process'", image: "/risks/3.jpg", description: "TRIBE completes conversion and zoning approvals upfront, not after you’ve invested." },
-  { title: "Encumbrances & Liabilities", tag: "Encumbrances & Liabilities", image: "/risks/1.png", description: "Every property is cleared of outstanding loans, disputes, or claims before onboarding." },
-  { title: "Illegal Layouts", tag: "Illegal Layouts", image: "/risks/1.png", description: "We block layouts that don’t comply with governing authority approvals." },
-  { title: "Environmental Restrictions", tag: "Environmental Restrictions", image: "/risks/1.png", description: "Properties violating eco and zonal norms are excluded from our listings." },
+  {
+    title: "Fake Or Disputed Ownership",
+    tag: "Fake Or Disputed Ownership",
+    image: "/risks/1.png",
+    description:
+      "TRIBE verifies every title through layered legal due diligence, protecting you from fraud.",
+  },
+  {
+    title: "Section 143/144 Restrictions",
+    tag: "Section 143/144 Restrictions",
+    image: "/risks/2.jpg",
+    description:
+      "We ensure only construction-ready plots enter our ecosystem—no hidden legal blocks.",
+  },
+  {
+    title: "Endless 'Approvals in Process'",
+    tag: "Endless 'Approvals in Process'",
+    image: "/risks/3.jpg",
+    description:
+      "TRIBE completes conversion and zoning approvals upfront, not after you’ve invested.",
+  },
+  {
+    title: "Encumbrances & Liabilities",
+    tag: "Encumbrances & Liabilities",
+    image: "/risks/1.png",
+    description:
+      "Every property is cleared of outstanding loans, disputes, or claims before onboarding.",
+  },
+  {
+    title: "Illegal Layouts",
+    tag: "Illegal Layouts",
+    image: "/risks/2.jpg",
+    description:
+      "We block layouts that don’t comply with governing authority approvals.",
+  },
+  {
+    title: "Environmental Restrictions",
+    tag: "Environmental Restrictions",
+    image: "/risks/3.jpg",
+    description:
+      "Properties violating eco and zonal norms are excluded from our listings.",
+  },
 ];
 
 const responsive = {
@@ -28,31 +65,39 @@ const responsive = {
 };
 
 const RisksCarousel: React.FC = () => {
-  const carouselRef = useRef<any>(null); // ✅ use 'any' instead of CarouselRef
+  const carouselRef = useRef<any>(null);
 
   return (
     <section className="container_section-white relative">
       <div className="container_content relative">
         {/* Heading + Arrows */}
         <div className="flex items-start justify-between mb-10 relative">
-          <h2 className="text-2xl md:text-3xl font-semibold text-green-900">
+          <motion.h2
+            className="text-2xl md:text-3xl font-semibold text-green-900"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: false }}
+          >
             The Critical Risks We Remove, <br />
             The Rare Trust We Deliver
-          </h2>
+          </motion.h2>
 
           {/* Controller Buttons */}
           <div className="flex gap-3 mt-2">
             <button
+              aria-label="Previous Slide"
               onClick={() => carouselRef.current?.previous()}
-              className="w-16 h-16 flex cursor-pointer items-center justify-center rounded-full border border-black hover:bg-black hover:text-white transition"
+              className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full border border-black hover:bg-black hover:text-white transition"
             >
-              <FaArrowLeft size={18} />
+              <FaArrowLeft size={16} />
             </button>
             <button
+              aria-label="Next Slide"
               onClick={() => carouselRef.current?.next()}
-              className="w-16 h-16 flex items-center cursor-pointer justify-center rounded-full border border-black hover:bg-black hover:text-white transition"
+              className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full border border-black hover:bg-black hover:text-white transition"
             >
-              <FaArrowRight size={18} />
+              <FaArrowRight size={16} />
             </button>
           </div>
         </div>
@@ -62,24 +107,44 @@ const RisksCarousel: React.FC = () => {
           ref={carouselRef}
           responsive={responsive}
           infinite
-          arrows={false} // default arrows disabled
+          arrows={false}
           itemClass="px-3"
         >
           {cards.map((card, idx) => (
-            <div key={idx} className="rounded-xl h-96 shadow-md overflow-hidden relative">
-                <div className="black-layer"></div>
+            <motion.div
+              key={idx}
+              className="rounded-xl h-96 shadow-md overflow-hidden relative group"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: idx * 0.1 }}
+              viewport={{ once: false, amount: 0.3 }}
+            >
+              {/* Background Image */}
               <img
                 src={card.image}
                 alt={card.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
               />
-              <div className="absolute bottom-4 p-4  w-full">
-                <span className="bg-[#0F3714] text-white text-xs px-2 py-1 rounded-xl border-[0.5px] border-white">
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+
+              {/* Content */}
+              <motion.div
+                className="absolute bottom-4 p-4 w-full text-white"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: false }}
+              >
+                <span className="bg-[#0F3714] text-white text-xs px-2 py-1 rounded-xl border border-white/40">
                   {card.tag}
                 </span>
-                <p className="text-white text-sm mt-4">{card.description}</p>
-              </div>
-            </div>
+                <p className="text-white text-sm mt-4 leading-relaxed opacity-90">
+                  {card.description}
+                </p>
+              </motion.div>
+            </motion.div>
           ))}
         </Carousel>
       </div>

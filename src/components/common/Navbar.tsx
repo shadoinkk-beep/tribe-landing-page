@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className="border-b fixed bg-[#FBF0D9] left-0 right-0 border-black text-black z-20">
+    <header className="border-b fixed bg-[#FCF2DA] left-0 right-0 border-black text-black z-20">
       <nav className="w-full max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">

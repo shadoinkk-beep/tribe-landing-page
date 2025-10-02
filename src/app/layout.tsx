@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Bricolage_Grotesque } from "next/font/google";
 import Navbar from "@/components/common/Navbar";
+import ContactForm from "@/components/common/Contact";
+import Footer from "@/components/common/Footer";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -77,6 +79,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* <header className="p-4 shadow-md">Navbar</header> */}
         <Navbar/>
         <main>{children}</main>
+            <ContactForm/>
+    <Footer/>
         {/* <footer className="p-4 text-center">
           © 2025 Tribe
         </footer> */}

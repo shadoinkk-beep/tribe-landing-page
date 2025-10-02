@@ -69,7 +69,7 @@ export default function AboutUs() {
                 collapse most farmhouse deals and deliver ownership that is both
                 secure and seamless.
               </p>
-              <a href="#" className="mt-3 text-sm font-medium underline">
+              <a href="#" className="mt-3 text-sm font-medium hover:underline">
                 Know More →
               </a>
             </div>
@@ -90,7 +90,7 @@ export default function AboutUs() {
                 clean and lifestyle-ready. For investors, this means peace of
                 mind and a true legacy asset.
               </p>
-              <a href="#" className="mt-3 text-sm font-medium underline">
+              <a href="#" className="mt-3 text-sm font-medium hover:underline">
                 Know More →
               </a>
             </div>

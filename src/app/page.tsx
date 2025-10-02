@@ -36,8 +36,7 @@ export default function Home() {
     <ProjectHero/>
     <FeatureHero/>
     <AboutUs/>
-    <ContactForm/>
-    <Footer/>
+
     
     </>
 

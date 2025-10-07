@@ -19,26 +19,26 @@ const features: Feature[] = [
     title: "Xcis",
     description:
       "Xcis is a farmhouse-only consulting partner that safeguards investors through compliance checks and due diligence. We de-risk land deals by verifying titles, approvals, and legal clearances before you invest.",
-    link: "#",
+    link: "/about",
     img: "/house1.png",
   },
   {
     title: "Compliance Without Compromise",
     description:
       "Xcis safeguards your investment by conducting layered due diligence—verifying everything, cross-checking approvals, and confirming zoning clearances. By removing hidden risks before you commit, we ensure the land you own is truly compliant, secure, and future-ready.",
-    link: "#",
+    link: "/about",
   },
   {
     title: "Luxury You Can Trust",
     description:
       "Alchemy delivers luxury farmhouse communities where every title is verified, every approval is secured, and every legal requirement is met before development begins. Beyond compliance, we design lifestyle-ready spaces with sustainability, beauty, health goals, and timeless architecture—ensuring your upgrade is not just beautiful, but also secure and future-proof.",
-    link: "#",
+    link: "/about",
   },
   {
     title: "Alchemy Landbase",
     description:
       "Alchemy Landbase develops luxury farmhouse communities with clear titles and full compliance. We deliver lifestyle-ready spaces designed for long-term security and legacy.",
-    link: "#",
+    link: "/about",
     img: "/house2.png",
   },
 ];

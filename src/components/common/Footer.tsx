@@ -43,7 +43,7 @@ export default function Footer() {
             <ul className=" grid gap-2 text-sm text-gray-700">
               <li><a href="#">Our LinkedIn</a></li>
               <li><a href="#">Our Projects</a></li>
-              <li><a href="#">About Us</a></li>
+              <li><a href="/about">About Us</a></li>
             </ul>
           </div>
 
@@ -79,6 +79,15 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+
+      <p className="text-center pt-6" >© Copyright {getCurrentYear()}, All Rights Reserved by Tribe</p>
+      
     </footer>
+
   );
+}
+
+function getCurrentYear(): number {
+  return new Date().getFullYear();
 }

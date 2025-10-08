@@ -17,6 +17,12 @@ html{
 
 }
 
+@theme{
+  --color-dark : #0F3714;
+  --color-light : #FBF0D9;
+
+}
+
 
 body {
   color: var(--foreground);
@@ -51,7 +57,24 @@ body {
 
 }
 
+@layer utilities {
+  .box-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform:translateY(100%);
+    transition: all 0.6s ease-in-out;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #2031cc);
+    pointer-events: none;
+    top:5%;
+  }
 
+  .group:hover .box-bg::after {
+    opacity: 1;
+    transform:translateY(0);
+  }
+}
 
 .button_black_bg{
   @apply bg-[#0F3714] text-white px-4 py-2 rounded-md hover:bg-transparent hover:text-black border border-[#0F3714]  transition;
@@ -61,6 +84,25 @@ body {
   @apply bg-transparent text-black px-4 py-2 rounded-md hover:bg-[#0F3714] hover:text-white border border-[#0F3714] transition;
 }
 
+.button_explore{
+  @apply self-start border border-white cursor-pointer hover:border-dark hover:text-dark text-sm font-medium px-4 py-1 rounded-md transition;
+}
+
+.bg_dark{
+  @apply bg-[#0F3714];
+}
+
+.bg-light{
+  @apply bg-[#FBF0D9];
+}
+
+.color-dark{
+  @apply text-[#0F3714];
+}
+
+.color-light{
+  @apply text-[#FBF0D9];
+}
 
 .black-layer {
   @apply absolute inset-0 bg-black/50;
@@ -75,4 +117,99 @@ button{
   html {
     color-scheme: dark;
   }
+}
+
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+.animate-marquee-left {
+  animation: marquee-left var(--duration, 40s) linear infinite;
+}
+@keyframes marquee-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+.animate-marquee-up {
+  animation: marquee-up var(--duration, 40s) linear infinite;
+}
+
+@keyframes enter {
+  from {
+    opacity: var(--tw-enter-opacity, 1);
+    transform: translate3d(
+        var(--tw-enter-translate-x, 0),
+        var(--tw-enter-translate-y, 0),
+        0
+      )
+      scale3d(
+        var(--tw-enter-scale, 1),
+        var(--tw-enter-scale, 1),
+        var(--tw-enter-scale, 1)
+      )
+      rotate(var(--tw-enter-rotate, 0));
+  }
+}
+@keyframes exit {
+  to {
+    opacity: var(--tw-exit-opacity, 1);
+    transform: translate3d(
+        var(--tw-exit-translate-x, 0),
+        var(--tw-exit-translate-y, 0),
+        0
+      )
+      scale3d(
+        var(--tw-exit-scale, 1),
+        var(--tw-exit-scale, 1),
+        var(--tw-exit-scale, 1)
+      )
+      rotate(var(--tw-exit-rotate, 0));
+  }
+}
+.direction-reverse {
+  animation-direction: reverse;
+}
+.gap-\[1rem\] {
+  gap: 1rem;
+}
+.\[--gap\:1rem\] {
+  --gap: 1rem;
+}
+.group:hover .group-hover\:\[animation-play-state\:paused\] {
+  animation-play-state: paused;
+}
+
+
+
+
+.image-gallery-content .image-gallery-slide .image-gallery-image{
+  @apply !h-[300px] sm:!h-[400px] !object-contain !w-full !-z-5;
+    overflow-y: auto !important;
+  touch-action: pan-y !important;
+}
+
+/* Ensure overflow is auto or visible */
+.image-gallery-slide-wrapper {
+  overflow-y: auto !important;
+  touch-action: pan-y !important;
+}
+
+
+.side_line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 25%;
+    height: 2px;
+    background-color: #c1c1c1;
+    margin-left: 8px;
 }

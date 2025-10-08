@@ -9,7 +9,7 @@ export default function ContactForm() {
       className="container_content text-white"
       
     >
-      <div style={{ backgroundImage: "url('./contact-form.jpg')" }} className="bg-cover bg-center rounded-lg p-10 grid gap-4 justify-center">
+      <div style={{ backgroundImage: "url('/contact-form.jpg')" }} className="bg-cover bg-center rounded-lg p-10 grid gap-4 justify-center">
         {/* Title */}
         <h2 className="text-2xl md:text-3xl font-semibold text-center">
           Start your farmhouse journey with confidence.

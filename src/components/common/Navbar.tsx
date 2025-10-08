@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
   // Dynamic links
   const links = [
     { name: "Home", href: "/" },
-    { name: "Our Projects", href: "/projects" },
+    { name: "Our Projects", href: "/#our_projects" },
     { name: "About Us", href: "/about" },
   ];
 

@@ -3,10 +3,11 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProjectHero() {
   return (
-    <section className="container_section-green">
+    <section id="our_projects"  className="container_section-green">
       <main className="container_content grid gap-6">
         {/* Hero Section */}
         <motion.div
@@ -16,7 +17,7 @@ export default function ProjectHero() {
           viewport={{ once: false, amount: 0.3 }}
           className="text-center grid gap-6"
         >
-          <h2 className="text-5xl md:text-7xl leading-snug">
+          <h1 className="text-5xl md:text-7xl leading-snug">
             Legally Clean & Verified <br />
             <span className="grid justify-center sm:inline-flex items-center gap-2">
               Lifestyle
@@ -31,7 +32,7 @@ export default function ProjectHero() {
               </span>
               Ready
             </span>
-          </h2>
+          </h1>
           <p className="text-3xl md:text-5xl">
             Farmhouses & Gated Communities
           </p>
@@ -43,13 +44,15 @@ export default function ProjectHero() {
               due diligence, luxury development,
             </p>
 
+            <Link href={"/projects/ananta"} >
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="block px-12 py-3 bg-white text-green-900 rounded-xl shadow font-medium cursor-pointer"
-            >
+              className="block px-12 py-3 border bg-white text-green-900 rounded-xl shadow font-medium cursor-pointer hover:bg-transparent hover:text-white hover:border-white"
+              >
               Explore Projects
             </motion.button>
+              </Link>
           </div>
         </motion.div>
 
@@ -85,9 +88,11 @@ export default function ProjectHero() {
             />
             <div className="flex justify-between items-center text-white">
               <span>Ananta Farms</span>
-              <button className="px-6 py-1 border text-sm border-white cursor-pointer">
+              <Link href={"/projects/ananta"} >
+              <button className="button_explore !rounded-none">
                 Explore
               </button>
+              </Link>
             </div>
           </motion.div>
 
@@ -109,9 +114,11 @@ export default function ProjectHero() {
             />
             <div className="flex justify-between items-center text-white">
               <span>Whispering Woods</span>
-              <button className="px-6 py-1 border text-sm border-white cursor-pointer">
+              <Link href={"/projects/whisperingwoods"}  >
+              <button className="button_explore !rounded-none">
                 Explore
               </button>
+              </Link>
             </div>
           </motion.div>
         </div>

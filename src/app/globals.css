@@ -45,7 +45,7 @@ body {
 }
 
 .container_section-white{
-  @apply w-full bg-[#FBF0D9] text-[#0F3714] py-6;
+  @apply w-full bg-[#FBF0D9] text-black py-6;
 }
 
 .container_content{

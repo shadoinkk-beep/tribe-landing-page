@@ -89,7 +89,7 @@ const OurVision: React.FC = () => {
               <img
                 src={member.image}
                 alt={member.name}
-                className="rounded-2xl mb-4 w-full object-cover aspect-[3/4] transition-transform duration-500 group-hover:scale-105"
+                className="rounded-2xl  w-full object-cover aspect-[3/4] transition-transform duration-500 group-hover:scale-105"
               />
 
               {/* Info Section */}
@@ -101,7 +101,7 @@ const OurVision: React.FC = () => {
                 </div>
 
                 {/* Hover state (social icons) */}
-                <div className="absolute inset-0 flex items-center justify-center gap-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <div className="absolute inset-0 flex pt-6 items-center justify-center gap-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   {member.linkedin && (
                     <a
                       href={member.linkedin}

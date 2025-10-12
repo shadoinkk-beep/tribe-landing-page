@@ -7,6 +7,7 @@ import {
   FaPencilAlt,
   FaChartLine,
 } from "react-icons/fa";
+import { MdAssuredWorkload, MdFactCheck, MdHistoryEdu, MdVerified } from "react-icons/md";
 
 interface ValueItem {
   icon: React.ElementType;
@@ -17,28 +18,28 @@ interface ValueItem {
 
 const values: ValueItem[] = [
   {
-    icon: FaCheckSquare,
+    icon: MdFactCheck,
     title: "Compliance First",
     description:
       "We begin with due diligence, not design. Every project passes layered legal checks before a single plan is drawn.",
     color: "bg-[#0F371466] text-black",
   },
   {
-    icon: FaMedal,
+    icon: MdVerified,
     title: "Transparency Always",
     description:
       "No hidden clauses, no 'approvals in process.' We share every document, every step — so investors always know what they own.",
     color: "bg-[#0F371466] text-black",
   },
   {
-    icon: FaPencilAlt,
+    icon: MdHistoryEdu,
     title: "Legacy-Driven Design",
     description:
       "We build farmhouses meant to outlive trends — rooted in soil health, sustainability, and timeless architecture.",
     color: "bg-[#0F371466] text-black",
   },
   {
-    icon: FaChartLine,
+    icon: MdAssuredWorkload,
     title: "Growth Without Compromise",
     description:
       "Our goal isn’t fast returns; it’s long-term value. We blend compliance, lifestyle, and nature into one ecosystem built to last.",
@@ -120,7 +121,7 @@ const OurValues: React.FC = () => {
                     variants={cardContentVariants}
                     className="flex-1"
                   >
-                    <Icon className="mb-16" size={28} />
+                    <Icon className="mb-16" size={36} />
                   </motion.div>
 
                   <motion.div
@@ -136,7 +137,7 @@ const OurValues: React.FC = () => {
                     <div
                       className={`h-[1px] w-full mb-3 ${
                         isActive || item.color.includes("text-white")
-                          ? "bg-[#0F371466]"
+                          ? "bg-white"
                           : "bg-[#0F3714]"
                       }`}
                     />

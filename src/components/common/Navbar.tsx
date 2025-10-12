@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
         {/* Desktop Buttons */}
         <div className="hidden md:flex items-center gap-4">
           <Link href="#contact" className="button_black_bg">
-            Get a Quote
+            Know More
           </Link>
           <Link href="#contact" className="button_white_bg">
             Contact Us
@@ -103,7 +103,7 @@ const Navbar: React.FC = () => {
             onClick={() => setIsOpen(false)}
             className="button_black_bg text-center"
           >
-            Get a Quote
+            Know More
           </Link>
           <Link
             href="#contact"

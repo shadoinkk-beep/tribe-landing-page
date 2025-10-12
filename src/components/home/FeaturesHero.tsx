@@ -50,7 +50,7 @@ export default function Features() {
     <section className="container_content grid  gap-8">
       {/* Section Header */}
       <div className=" grid justify-center  gap-4 text-center mb-12">
-        <h2 className="text-2xl md:text-3xl font-semibold text-green-900">
+        <h2 className="text-2xl md:text-3xl font-semibold ">
           We don’t just sell land parcels. <br />
           We secure law, lifestyle, and legacy for generations.
         </h2>
@@ -62,7 +62,7 @@ export default function Features() {
       </div>
 
       {/* Cards Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-9 gap-8">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-9 gap-3">
         {/* Row 1 */}
         <motion.div
           className="md:col-span-5 bg-green-900 text-white rounded-2xl overflow-hidden shadow-md relative h-96"

@@ -4,12 +4,13 @@ import { BsArrowRight } from "react-icons/bs";
 
 export default function ContactForm() {
   return (
-    <section id="contact" className="container_section-white">
+    <section id="contact" className="container_section-white relative">
     <main
-      className="container_content text-white"
+      className="container_content text-white relative"
       
     >
-      <div style={{ backgroundImage: "url('/contact-form.jpg')" }} className="bg-cover bg-center rounded-lg p-10 grid gap-4 justify-center">
+      <div style={{ backgroundImage: "url('/contact-form.jpg')" }} className="absolute inset-4 sm:inset-10 inset-y-18 bg-cover bg-center brightness-[70%] rounded-md  container_content" />
+      <div  className="bg-cover bg-center rounded-lg p-10 grid gap-4 justify-center relative">
         {/* Title */}
         <h2 className="text-2xl md:text-3xl font-semibold text-center">
           Start your farmhouse journey with confidence.

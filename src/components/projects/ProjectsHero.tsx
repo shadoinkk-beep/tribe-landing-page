@@ -1,42 +1,63 @@
-// app/page.tsx
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { Textfit } from "react-textfit";
 
 export default function ProjectHero() {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  // 🔁 Track window size and trigger re-render on resize
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    handleResize(); // initial call
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <section id="our_projects"  className="container_section-green">
+    <section id="our_projects" className="container_section-green">
       <main className="container_content grid gap-6">
         {/* Hero Section */}
         <motion.div
+
+          key={windowWidth} // 👈 ensures Textfit re-renders on resize
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="text-center grid gap-6"
+          className="text-center gap-6 grid"
         >
-          <h1 className="text-5xl md:text-7xl leading-snug">
-            Legally Clean & Verified <br />
-            <span className="grid justify-center sm:inline-flex items-center gap-2">
-              Lifestyle
-              <span className="rounded-full overflow-hidden w-64 h-18 sm:mx-8">
-                <Image
-                  src="/textImageSmall.png"
-                  alt="Farmhouse"
-                  width={128}
-                  height={48}
-                  className="object-cover w-full h-full"
-                />
-              </span>
-              Ready
-            </span>
-          </h1>
-          <p className="text-3xl md:text-5xl">
-            Farmhouses & Gated Communities
-          </p>
+          {/* Title 1 */}
+          <Textfit mode="single" className="font-semibold" max={200} style={{ width: "100%" }}>
+            Legally Clean & Verified
+          </Textfit>
 
+          {/* Title 2 */}
+          <span className="flex justify-center sm:inline-flex items-center gap-2">
+            <Textfit mode="single" style={{ width: "33%" }}>
+              Lifestyle
+            </Textfit>
+            <span className="overflow-hidden w-[33%] aspect-[551/151] sm:mx-8">
+              <img
+                src="/textImageSmall.png"
+                alt="Farmhouse"
+                className="object-cover w-full h-full rounded-full"
+              />
+            </span>
+            <Textfit mode="single" style={{ width: "33%" }}>
+              Ready
+            </Textfit>
+          </span>
+
+          {/* Title 3 */}
+          <Textfit mode="single" style={{ width: "100%" }}>
+            Farmhouses & Gated Communities
+          </Textfit>
+
+          {/* Description + Button */}
           <div className="grid gap-6 sm:flex justify-between items-center">
             <p className="text-gray-200 max-w-md text-left text-sm md:text-base">
               TRIBE is India’s first integrated farmhouse ecosystem, built to
@@ -44,15 +65,15 @@ export default function ProjectHero() {
               due diligence, luxury development,
             </p>
 
-            <Link href={"/projects/ananta"} >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="block px-12 py-3 border bg-white text-green-900 rounded-xl shadow font-medium cursor-pointer hover:bg-transparent hover:text-white hover:border-white"
+            <Link href={"/projects/ananta"}>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="block px-12 py-3 border bg-white text-green-900 rounded-xl shadow font-medium cursor-pointer hover:bg-transparent hover:text-white hover:border-white"
               >
-              Explore Projects
-            </motion.button>
-              </Link>
+                Explore Projects
+              </motion.button>
+            </Link>
           </div>
         </motion.div>
 
@@ -88,10 +109,8 @@ export default function ProjectHero() {
             />
             <div className="flex justify-between items-center text-white">
               <span>Ananta Farms</span>
-              <Link href={"/projects/ananta"} >
-              <button className="button_explore !rounded-none">
-                Explore
-              </button>
+              <Link href={"/projects/ananta"}>
+                <button className="button_explore !rounded-none">Explore</button>
               </Link>
             </div>
           </motion.div>
@@ -114,10 +133,8 @@ export default function ProjectHero() {
             />
             <div className="flex justify-between items-center text-white">
               <span>Whispering Woods</span>
-              <Link href={"/projects/whisperingwoods"}  >
-              <button className="button_explore !rounded-none">
-                Explore
-              </button>
+              <Link href={"/projects/whisperingwoods"}>
+                <button className="button_explore !rounded-none">Explore</button>
               </Link>
             </div>
           </motion.div>

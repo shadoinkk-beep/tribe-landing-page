@@ -73,7 +73,7 @@ const RisksCarousel: React.FC = () => {
         {/* Heading + Arrows */}
         <div className="flex items-start justify-between mb-10 relative">
           <motion.h2
-            className="text-2xl md:text-3xl font-semibold text-green-900"
+            className="text-2xl md:text-3xl font-semibold "
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}

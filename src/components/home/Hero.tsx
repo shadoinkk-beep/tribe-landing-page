@@ -8,11 +8,12 @@ export const Hero: FC = () => {
   return (
     <section
       style={{ backgroundImage: "url('./HeroMainBg.png')" }}
-      className="container_section-white min-h-screen bg-cover bg-center flex items-start justify-center"
+      
+      className="container_section-white sm:min-h-screen h-screen sm:h-auto bg-cover bg-center flex items-start justify-center sm:aspect-[1536/1024]"
     >
-      <main className="container_content grid justify-center items-center content-center">
+      <main className="container_content h-full grid justify-center ">
         <motion.div
-          className="text-center"
+          className="text-center top-16 relative overflow-visible"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
@@ -20,7 +21,7 @@ export const Hero: FC = () => {
         >
           {/* Main headline text */}
           <motion.h1
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-medium leading-snug mb-10"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl  font-medium leading-snug mb-10"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
@@ -39,13 +40,13 @@ export const Hero: FC = () => {
             viewport={{ once: false }}
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
           >
-            {/* Get a Quote Button (Dark Green) */}
-            <Link href={"#contact"} className="button_black_bg">
-              Get a Quote
+            {/* Explore Projects Button (Dark Green) */}
+            <Link href={"#our_projects"} className="button_black_bg !px-18">
+              Explore Projects
             </Link>
 
             {/* Contact Us Button (Light Bordered) */}
-            <Link href={"#contact"} className="button_white_bg">
+            <Link href={"#contact"} className="button_white_bg !px-18">
               Contact Us
             </Link>
           </motion.div>

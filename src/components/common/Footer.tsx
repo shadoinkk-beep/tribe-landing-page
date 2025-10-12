@@ -41,8 +41,8 @@ export default function Footer() {
           <div className="">
             <h3 className="font-semibold text-lg mb-3">Company</h3>
             <ul className=" grid gap-2 text-sm text-gray-700">
-              <li><a href="#">Our LinkedIn</a></li>
-              <li><a href="#">Our Projects</a></li>
+              <li><a target="_blank" href="https://www.linkedin.com/company/tribeestates/">Our LinkedIn</a></li>
+              <li><a href="/#our_projects">Our Projects</a></li>
               <li><a href="/about">About Us</a></li>
             </ul>
           </div>

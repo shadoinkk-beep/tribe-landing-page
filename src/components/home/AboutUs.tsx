@@ -35,7 +35,7 @@ export default function AboutUs() {
                 <div className="aspect-square h-48 sm:h-50 md:h-60 lg:h-64 rounded-full border border-white flex flex-col items-center justify-center text-left z-10">
                   <span className="text-2xl  md:text-5xl font-normal">
                     {startCount ? (
-                      <CountUp start={0} className="" end={500} duration={2} suffix="+" />
+                      <CountUp start={0} className="" end={100} duration={2} suffix="+" />
                     ) : (
                       "0+"
                     )}

@@ -65,7 +65,7 @@ export default function Features() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-9 gap-3">
         {/* Row 1 */}
         <motion.div
-          className="md:col-span-5 bg-green-900 text-white rounded-2xl overflow-hidden shadow-md relative h-96"
+          className="md:col-span-5 bg-[#0F3714] text-white rounded-2xl overflow-hidden shadow-md relative h-96"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -95,7 +95,7 @@ export default function Features() {
         </motion.div>
 
         <motion.div
-          className="bg-green-900 text-white rounded-2xl p-6 shadow-md grid md:col-span-4 h-96"
+          className="bg-[#0F3714] text-white rounded-2xl p-6 shadow-md grid md:col-span-4 h-96"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -115,7 +115,7 @@ export default function Features() {
 
         {/* Row 2 */}
         <motion.div
-          className="bg-green-900 text-white rounded-2xl p-6 shadow-md grid md:col-span-4 h-96"
+          className="bg-[#0F3714] text-white rounded-2xl p-6 shadow-md grid md:col-span-4 h-96"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -136,7 +136,7 @@ export default function Features() {
         </motion.div>
 
         <motion.div
-          className="md:col-span-5 bg-green-900 text-white rounded-2xl overflow-hidden shadow-md relative h-96"
+          className="md:col-span-5 bg-[#0F3714] text-white rounded-2xl overflow-hidden shadow-md relative h-96"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}

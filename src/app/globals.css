@@ -41,7 +41,7 @@ body {
 }
 
 .container_section-green{
-  @apply w-full bg-green-900 py-6 text-white;
+  @apply w-full bg-[#0F3714] py-6 text-white;
 }
 
 .container_section-white{

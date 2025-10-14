@@ -21,7 +21,7 @@ html{
 }
 
 @theme{
-  --color-dark : #0F3714;
+  --color-dark : #4B3D1A;
   --color-light : #FBF0D9;
 
 }
@@ -41,7 +41,7 @@ body {
 }
 
 .container_section-green{
-  @apply w-full bg-[#0F3714] py-6 text-white;
+  @apply w-full bg-[#4B3D1A] py-6 text-white;
 }
 
 .container_section-white{
@@ -73,27 +73,27 @@ body {
 }
 
 .button_black_bg{
-  @apply bg-[#0F3714] text-white px-4 py-2 rounded-md hover:bg-transparent hover:text-black border border-[#0F3714]  transition;
+  @apply bg-[#4B3D1A] text-white px-4 py-2 rounded-md hover:bg-transparent hover:text-black border border-[#4B3D1A]  transition;
 }
 
 .button_white_bg{
-  @apply bg-transparent text-black px-4 py-2 rounded-md hover:bg-[#0F3714] hover:text-white border border-[#0F3714] transition;
+  @apply bg-transparent text-black px-4 py-2 rounded-md hover:bg-[#4B3D1A] hover:text-white border border-[#4B3D1A] transition;
 }
 
 .button_explore{
-  @apply self-start border border-white cursor-pointer hover:border-dark hover:text-dark text-sm font-medium px-4 py-1 rounded-md transition;
+  @apply self-start border border-white cursor-pointer hover:border-dark hover:text-dark hover:bg-light text-sm font-medium px-4 py-1 rounded-md transition;
 }
 
 .bg_dark{
-  @apply bg-[#0F3714];
+  @apply bg-[#4B3D1A];
 }
 
-.bg-light{
+.bg_light{
   @apply bg-[#FBF0D9];
 }
 
 .color-dark{
-  @apply text-[#0F3714];
+  @apply text-[#4B3D1A];
 }
 
 .color-light{

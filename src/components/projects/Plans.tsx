@@ -31,7 +31,7 @@ const Plans = () => {
                 alt={`${plan.bhk} Plan`}
                 className="w-full h-64 object-cover blur-sm"
               />
-              <button className="button-primary absolute inset-0 m-auto bg-[#0F3714] hover:bg-green-800 text-white px-4 py-2 rounded w-max h-max">
+              <button className="button-primary absolute inset-0 m-auto bg-[#4B3D1A] hover:bg-green-800 text-white px-4 py-2 rounded w-max h-max">
                 View Plan
               </button>
             </div>

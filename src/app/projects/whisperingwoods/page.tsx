@@ -138,7 +138,7 @@ export default function WhisperingWoodsPage() {
       price: config.estimatedEarnings.replace(/[^0-9]/g, ""),
       availability: "https://schema.org/InStock",
     })),
-    image: [`https://tribegroup.in/images/${project.slug}.jpg`],
+    image: [`https://tribegroup.in/projects/whisperingwoods/main.jpg`],
     additionalProperty: [
       { "@type": "PropertyValue", name: "Location", value: project.location },
       {
@@ -171,7 +171,7 @@ export default function WhisperingWoodsPage() {
         "@type": "ListItem",
         position: 3,
         name: project.title,
-        item: `https://tribegroup.in/projects/${project.slug}`,
+        item: `https://tribegroup.in/projects/whisperingwoods`,
       },
     ],
   };

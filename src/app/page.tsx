@@ -7,12 +7,12 @@ import RisksCarousel from "@/components/home/RisksCarousel";
 import ProjectHero from "@/components/projects/ProjectsHero";
 
 export const metadata = {
-  title: "Luxury Real Estate Properties in India",
+  title: "Luxury Farmhouses in India",
   description:
     "Discover premium farmhouses projects across India with Tribe Group.",
   openGraph: {
     title: "Luxury Real Estate Properties in India",
-    description: "Find your dream property with Tribe Group.",
+    description: "Discover premium farmhouses projects across India with Tribe Group.",
     url: "https://tribegroup.in",
     images: [
       {

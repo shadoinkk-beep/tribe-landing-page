@@ -22,28 +22,28 @@ const values: ValueItem[] = [
     title: "Compliance First",
     description:
       "We begin with due diligence, not design. Every project passes layered legal checks before a single plan is drawn.",
-    color: "bg-[#0F371466] text-black",
+    color: "bg-[#4B3D1A66] text-black",
   },
   {
     icon: MdVerified,
     title: "Transparency Always",
     description:
       "No hidden clauses, no 'approvals in process.' We share every document, every step — so investors always know what they own.",
-    color: "bg-[#0F371466] text-black",
+    color: "bg-[#4B3D1A66] text-black",
   },
   {
     icon: MdHistoryEdu,
     title: "Legacy-Driven Design",
     description:
       "We build farmhouses meant to outlive trends — rooted in soil health, sustainability, and timeless architecture.",
-    color: "bg-[#0F371466] text-black",
+    color: "bg-[#4B3D1A66] text-black",
   },
   {
     icon: MdAssuredWorkload,
     title: "Growth Without Compromise",
     description:
       "Our goal isn’t fast returns; it’s long-term value. We blend compliance, lifestyle, and nature into one ecosystem built to last.",
-    color: "bg-[#0F371466] text-black",
+    color: "bg-[#4B3D1A66] text-black",
   },
 ];
 
@@ -138,7 +138,7 @@ const OurValues: React.FC = () => {
                       className={`h-[1px] w-full mb-3 ${
                         isActive || item.color.includes("text-white")
                           ? "bg-white"
-                          : "bg-[#0F3714]"
+                          : "bg-[#4B3D1A]"
                       }`}
                     />
                     <p className="text-base font-medium">{item.title}</p>

@@ -82,7 +82,7 @@ const OurVision: React.FC = () => {
           {team.map((member, index) => (
             <motion.div
               key={index}
-              className="bg-[#0F3714] text-white pb-4 rounded-2xl shadow-lg p-1 flex flex-col items-center overflow-hidden group relative"
+              className="bg-[#4B3D1A] text-white pb-4 rounded-2xl shadow-lg p-1 flex flex-col items-center overflow-hidden group relative"
               variants={fadeUp}
             >
               {/* Image */}

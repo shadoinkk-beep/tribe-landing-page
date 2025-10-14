@@ -4,7 +4,9 @@ import { Bricolage_Grotesque } from "next/font/google";
 import Navbar from "@/components/common/Navbar";
 import ContactForm from "@/components/common/Contact";
 import Footer from "@/components/common/Footer";
-
+import Script from "next/script";
+import GoogleAnalytics from "./providers";
+import { Suspense } from "react";
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700", "800"],
@@ -75,7 +77,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="en" className={bricolage.variable}>
+      <head>
+                <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
+      </head>
       <body>
+                <Suspense fallback={null}>
+          <GoogleAnalytics />
+        </Suspense>
         {/* <header className="p-4 shadow-md">Navbar</header> */}
         <Navbar/>
         <main>{children}</main>

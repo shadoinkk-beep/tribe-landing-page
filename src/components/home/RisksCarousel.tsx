@@ -137,7 +137,7 @@ const RisksCarousel: React.FC = () => {
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: false }}
               >
-                <span className="bg-[#0F3714] text-white text-xs px-2 py-1 rounded-xl border border-white/40">
+                <span className="bg-[#4B3D1A] text-white text-xs px-2 py-1 rounded-xl border border-white/40">
                   {card.tag}
                 </span>
                 <p className="text-white text-sm mt-4 leading-relaxed opacity-90">

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: "https://tribegroup.in/projects/ananta",
     images: [
       {
-        url: "https://tribegroup.in/og/ananta.jpg",
+        url: "https://www.tribegroup.in/projects/ananta/main.webp",
         width: 1200,
         height: 630,
         alt: "Ananta – Luxury Micro Farmhouses",

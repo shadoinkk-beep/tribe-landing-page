@@ -110,17 +110,7 @@ export default function WhisperingWoodsPage() {
     ],
   };
 
-  const amenities = [
-    "Adventure Island Park with zip lines and rock climbing",
-    "Nature trails and woodland walks",
-    "Cycle track and community vegetation area",
-    "Skate park, cricket pitch, and beach volleyball",
-    "Tennis and half basketball courts",
-    "Clubhouse with restaurant, coffee house, and gym",
-    "Squash room, badminton courts, and daycare centre",
-    "Party lawn and amphitheatre",
-    "Serene water bodies and landscaped greens",
-  ];
+
 
   const projectSchema = {
     "@context": "https://schema.org",

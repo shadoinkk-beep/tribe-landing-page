@@ -60,9 +60,9 @@ const Amenites: FC = () => {
 
     <div
       
-      className="container_content"
+      className="container_content grid gap-4"
     >
-      <span className="bg-white text-black px-4 py-1 rounded-full text-lg font-normal w-fit">
+      <span className="bg-white text-black px-4 py-1  rounded-full text-lg font-normal w-fit">
         Amenities
       </span>
 

@@ -8,7 +8,7 @@ export const metadata = {
   description:
     "Tribe brings together 16+ years of real estate and finance expertise with a proven track record in farmhouse land, development and investor trust",
   openGraph: {
-    title: "About Tribe Group",
+    title: "About Us – Tribe Group",
     description:
       "Tribe brings together 16+ years of real estate and finance expertise with a proven track record in farmhouse land, development and investor trust",
     url: "https://tribegroup.in/about",

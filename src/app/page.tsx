@@ -11,7 +11,7 @@ export const metadata = {
   description:
     "Discover premium farmhouses projects across India with Tribe Group.",
   openGraph: {
-    title: "Luxury Real Estate Properties in India",
+    title: "Luxury Farmhouses in India",
     description: "Discover premium farmhouses projects across India with Tribe Group.",
     url: "https://tribegroup.in",
     images: [

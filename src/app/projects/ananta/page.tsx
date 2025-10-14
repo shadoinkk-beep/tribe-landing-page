@@ -68,7 +68,7 @@ export default function ProjectAnantaPage() {
       price: project.price,
       availability: "https://schema.org/InStock",
     },
-    image: [`https://tribegroup.in/images/ananta-farms.webp`],
+    image: [`https://www.tribegroup.in/projects/ananta/main.webp`],
     additionalProperty: [
       { "@type": "PropertyValue", name: "Construction Area", value: project.constructionArea },
       { "@type": "PropertyValue", name: "Plot Area", value: project.plotArea },
@@ -77,30 +77,7 @@ export default function ProjectAnantaPage() {
     ],
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://tribegroup.in/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Projects",
-        item: "https://tribegroup.in/projects/ananta",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: project.title,
-        item: `https://tribegroup.in/projects/${project.slug}`,
-      },
-    ],
-  };
+
 
   return (
     <>

@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     url: "https://tribegroup.in/projects/whispering-woods",
     images: [
       {
-        url: "https://tribegroup.in/og/whispering-woods.jpg",
+        url: "https://www.tribegroup.in/projects/whisperingwoods/main.jpg",
         width: 1200,
         height: 630,
         alt: "Whispering Woods – Luxury Farmhouses in Alwar",

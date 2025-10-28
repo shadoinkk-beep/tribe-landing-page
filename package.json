@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@devnomic/marquee": "^1.0.3",
+    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/postcss": "^4.1.13",
     "framer-motion": "^12.23.22",
     "next": "15.5.4",
@@ -19,6 +20,7 @@
     "react-animation-on-scroll": "^5.1.0",
     "react-countup": "^6.5.3",
     "react-dom": "19.1.0",
+    "react-hot-toast": "^2.6.0",
     "react-icons": "^5.5.0",
     "react-image-gallery": "^1.4.0",
     "react-intersection-observer": "^9.16.0",

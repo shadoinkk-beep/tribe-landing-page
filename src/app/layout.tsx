@@ -6,6 +6,7 @@ import ContactForm from "@/components/common/Contact";
 import Footer from "@/components/common/Footer";
 import Script from "next/script";
 import GoogleAnalytics from "./providers";
+import { Toaster } from "react-hot-toast";
 import { Suspense } from "react";
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -102,6 +103,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
             <ContactForm/>
     <Footer/>
+    <Toaster
+          position="top-right"
+          toastOptions={{
+            duration: 4000,
+            style: {
+              background: "#111",
+              color: "#fff",
+              borderRadius: "8px",
+            },
+            success: {
+              iconTheme: {
+                primary: "#B47F2B",
+                secondary: "#fff",
+              },
+            },
+          }}
+        />
         {/* <footer className="p-4 text-center">
           © 2025 Tribe
         </footer> */}

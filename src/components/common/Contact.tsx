@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
@@ -30,7 +29,6 @@ export default function ContactForm() {
     const toastId = toast.loading("Sending your message...");
 
     try {
-      // Merge firstName and lastName into single 'name' field
       const fullName = `${formData.firstName} ${formData.lastName}`.trim();
 
       await emailjs.send(
@@ -73,20 +71,22 @@ export default function ContactForm() {
           style={{ backgroundImage: "url('/contact-form.jpg')" }}
           className="absolute inset-4 sm:inset-10 inset-y-18 bg-cover bg-center brightness-[70%] rounded-md container_content"
         />
+
         <div className="bg-cover bg-center rounded-lg p-10 grid gap-4 justify-center relative">
           <h2 className="text-2xl md:text-3xl font-semibold text-center">
             Start your farmhouse journey with confidence.
           </h2>
+
           <p className="text-center text-gray-200 mt-2 mb-8 text-sm md:text-base max-w-2xl mx-auto">
-            Every great investment begins with clarity. Speak to our compliance and
-            development team to de-risk your farmhouse decision.
+            Every great investment begins with clarity. Speak to our compliance
+            and development team to de-risk your farmhouse decision.
           </p>
 
           <form
             onSubmit={handleSubmit}
             className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full"
           >
-            {/* First Name */}
+            {/* First Name (Required) */}
             <div>
               <label className="block text-sm mb-1">First Name*</label>
               <input
@@ -100,35 +100,33 @@ export default function ContactForm() {
               />
             </div>
 
-            {/* Last Name */}
+            {/* Last Name (Optional) */}
             <div>
-              <label className="block text-sm mb-1">Last Name*</label>
+              <label className="block text-sm mb-1">Last Name</label>
               <input
                 type="text"
                 name="lastName"
                 placeholder="Enter last name"
                 value={formData.lastName}
                 onChange={handleChange}
-                required
                 className="w-full px-4 py-2 rounded-md bg-white/20 border border-gray-400 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
               />
             </div>
 
-            {/* Email */}
+            {/* Email (Optional) */}
             <div>
-              <label className="block text-sm mb-1">Email*</label>
+              <label className="block text-sm mb-1">Email</label>
               <input
                 type="email"
                 name="email"
                 placeholder="Enter email address"
                 value={formData.email}
                 onChange={handleChange}
-                required
                 className="w-full px-4 py-2 rounded-md bg-white/20 border border-gray-400 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
               />
             </div>
 
-            {/* Phone */}
+            {/* Phone Number (Required) */}
             <div>
               <label className="block text-sm mb-1">Phone Number*</label>
               <div className="flex items-center bg-white/20 border border-gray-400 rounded-md overflow-hidden">
@@ -145,7 +143,7 @@ export default function ContactForm() {
               </div>
             </div>
 
-            {/* Comment */}
+            {/* Comment (Optional) */}
             <div className="md:col-span-2">
               <label className="block text-sm mb-1">Comment</label>
               <textarea

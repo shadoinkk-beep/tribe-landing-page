@@ -5,13 +5,13 @@ const PriceList = () => {
     {
       bhk: "2.5 BHK",
       size: "1500 Sq. Yards*",
-      price: "₹ 1.8 Cr* Onwards",
+      price: "₹ 2 Cr* Onwards",
       img:"/images/overview.webp",
     },
     {
       bhk: "3.5 BHK",
       size: "3000 Sq. Yards*",
-      price: "₹ 3 Cr* Onwards",
+      price: "₹ 3.55 Cr* Onwards",
       img:"/projects/whisperingwoods/main.jpg",
     },
   ];

@@ -18,7 +18,7 @@ const HighlightSection:FC<{name:string,address:string,bg:string}> = ({name,addre
       <div className="max-w-7xl mx-auto flex justify-between items-end  md:px-10">
         
       <div className="relative sm:top-32 bg-btn-primary  sm:bg-transparent sm:border-white/30 sm:border-1 sm:backdrop-blur-sm text-white z-10 sm:max-w-md w-full p-6 md:p-10 sm:rounded-lg shadow-lg space-y-4">
-        <div className="grid text-white">
+        <div className="grid text-black sm:text-white">
 
         <img src="/images/stay_vista.png" className="h-24 object-contain sm:hidden mb-4" alt="" />
         
@@ -26,8 +26,8 @@ const HighlightSection:FC<{name:string,address:string,bg:string}> = ({name,addre
         <h2 className="text-2xl font-semibold">{name}</h2>
         <p className="text-lg">2.5 & 3.5 BHK Store with Private Pool and Outhouse</p>
         <p className="text-sm uppercase mt-4">Starting at</p>
-        <div className="bg-btn-primary border-1 sm:border-0 border-white  px-4 py-1 font-semibold text-sm text-center inline-block">
-          ₹ 1.85 Cr*
+        <div className="bg-btn-primary border-1 sm:border-0 border-black sm:border-white  px-4 py-1 font-semibold text-sm text-center inline-block">
+          ₹ 2 Cr*
         </div>
         </div>
 
@@ -36,7 +36,7 @@ const HighlightSection:FC<{name:string,address:string,bg:string}> = ({name,addre
             <li key={index} className="flex items-start gap-2">
               {/* <CheckCircle2 className="text-white shrink-0" /> */}
               <span>☑️</span>
-              <span className="text-white font-medium">{feature}</span>
+              <span className="text-black sm:text-white font-medium">{feature}</span>
             </li>
           ))}
         </ul>
@@ -44,7 +44,7 @@ const HighlightSection:FC<{name:string,address:string,bg:string}> = ({name,addre
         {/* <ContactModal text="Enquire Now" className="mt-6 w-full border-white border-1 hover:text-indigo-400 cursor-pointer text-white py-3 font-semibold"/> */}
           {/* ENQUIRE NOW */}
         
-        <Link href={"#contact"} className="mt-6 w-full border-white border-1 hover:bg-btn-hover-primary cursor-pointer text-white py-3 font-semibold block text-center">
+        <Link href={"#contact"} className="mt-6 w-full border-black sm:border-white border-1 hover:bg-btn-hover-primary cursor-pointer text-black sm:text-white py-3 font-semibold block text-center">
           ENQUIRE NOW
         </Link >
       </div>

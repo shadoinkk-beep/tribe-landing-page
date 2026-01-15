@@ -17,7 +17,7 @@ const HighlightSection:FC<{name:string,address:string,bg:string}> = ({name,addre
 
       <div className="max-w-7xl mx-auto flex justify-between items-end  md:px-10">
         
-      <div className="relative sm:top-32 bg-btn-primary  sm:bg-transparent sm:border-white/30 sm:border-1 sm:backdrop-blur-sm text-white z-10 sm:max-w-md w-full p-6 md:p-10 sm:rounded-lg shadow-lg space-y-4">
+      <div className="relative sm:top-32 bg-btn-primary  sm:bg-black/45 sm:border-white/30 sm:border-1 sm:backdrop-blur-sm text-white z-10 sm:max-w-md w-full p-6 md:p-10 sm:rounded-lg shadow-lg space-y-4">
         <div className="grid text-black sm:text-white">
 
         <img src="/images/stay_vista.png" className="h-24 object-contain sm:hidden mb-4" alt="" />
@@ -26,7 +26,7 @@ const HighlightSection:FC<{name:string,address:string,bg:string}> = ({name,addre
         <h2 className="text-2xl font-semibold">{name}</h2>
         <p className="text-lg">2.5 & 3.5 BHK Store with Private Pool and Outhouse</p>
         <p className="text-sm uppercase mt-4">Starting at</p>
-        <div className="bg-btn-primary border-1 sm:border-0 border-black sm:border-white  px-4 py-1 font-semibold text-sm text-center inline-block">
+        <div className="bg-[#18259c] border-1 sm:border-0 border-black sm:border-white  px-4 py-1 font-semibold text-sm text-center inline-block">
           ₹ 2 Cr*
         </div>
         </div>

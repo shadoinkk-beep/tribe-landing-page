@@ -27,7 +27,7 @@ const HighlightSection:FC<{name:string,address:string,bg:string}> = ({name,addre
         <p className="text-lg">2.5 & 3.5 BHK Store with Private Pool and Outhouse</p>
         <p className="text-sm uppercase mt-4">Starting at</p>
         <div className="bg-[#18259c] border-1 sm:border-0 border-black sm:border-white  px-4 py-1 font-semibold text-sm text-center inline-block">
-          ₹ 2 Cr*
+          ₹ 2.35 Cr*
         </div>
         </div>
 

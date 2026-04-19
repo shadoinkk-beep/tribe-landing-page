@@ -5,7 +5,7 @@ const PriceList = () => {
     {
       bhk: "2.5 BHK",
       size: "1500 Sq. Yards*",
-      price: "₹ 2 Cr* Onwards",
+      price: "₹ 2.35 Cr* Onwards",
       img:"/images/overview.webp",
     },
     {

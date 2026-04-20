@@ -63,10 +63,10 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-3">Contact Us</h3>
             <ul className="grid gap-2 text-sm text-gray-700">
               <li className="flex items-center gap-2">
-                <CgMail className="w-4 h-4" /> info@tribe.com
+                <CgMail className="w-4 h-4" /> Info@tribegroup.in
               </li>
               <li className="flex items-center gap-2">
-                <CgPhone className="w-4 h-4" /> +91 70300 62277
+                <CgPhone className="w-4 h-4" /> +91 91209 62233
               </li>
               <li className="flex items-start gap-2">
                 <FiMapPin className="w-4 h-4 sm:w-8 sm:h-8 -mt-0.5" />

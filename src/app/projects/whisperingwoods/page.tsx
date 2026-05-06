@@ -220,7 +220,7 @@ export default function WhisperingWoodsPage() {
     <HighlightSection name="Whispering Woods" address="Naogaon, Delhi - Mumbai Expressway" bg="/projects/whisperingwoods/main.jpg" />
 
     <About brochure="/Whispering Woods_10Jun Update.pdf" image="/images/overview.webp" name="Whispering Woods" about="Experience the pinnacle of luxury living at Whispering Woods Luxury Micro
-          Farmhouses by Ram Rattan Group. Set amidst tranquil landscapes, this exclusive
+          Farmhouses by Tribe Group. Set amidst tranquil landscapes, this exclusive
           development offers a refined lifestyle like no other. Ideally located off the
           Delhi-Jaipur Expressway, Whispering Woods provides seamless connectivity while
           serving as a peaceful escape from the city's fast pace." />

@@ -10,7 +10,7 @@ export interface FaqItem {
     {
       question: 'What is Whispering Woods?',
       answer:
-        'Whispering Woods is a luxury farmhouse community developed by the Ram Rattan Group, offering 2.5 and 3.5 BHK farmhouses with private pools, set within a gated, eco-friendly estate off the Delhi-Mumbai Expressway.',
+        'Whispering Woods is a luxury farmhouse community developed by the Tribe Group, offering 2.5 and 3.5 BHK farmhouses with private pools, set within a gated, eco-friendly estate off the Delhi-Mumbai Expressway.',
     },
     {
       question: 'Where is it located?',

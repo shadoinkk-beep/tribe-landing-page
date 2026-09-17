@@ -1,4 +1,4 @@
-"use client";
+/*"use client";
 
 import React from "react";
 import { motion, Variants } from "framer-motion";
@@ -57,7 +57,7 @@ const OurVision: React.FC = () => {
       viewport={{ once: false, amount: 0.2 }}
     >
       <motion.div className="container_content" variants={container}>
-        {/* Header */}
+        {/* Header *//*}
         <motion.h2
           className="text-5xl lg:text-7xl font-bold mb-6 text-left text-black"
           variants={fadeUp}
@@ -77,7 +77,7 @@ const OurVision: React.FC = () => {
           without compromise.
         </motion.p>
 
-        {/* Team Grid */}
+        {/* Team Grid *//*}
         <motion.div className="grid md:grid-cols-3 gap-8" variants={container}>
           {team.map((member, index) => (
             <motion.div
@@ -86,22 +86,22 @@ const OurVision: React.FC = () => {
               variants={fadeUp}
             >
               {/* Image */}
-              <img
+              /*<img
                 src={member.image}
                 alt={member.name}
                 className="rounded-2xl  w-full object-cover aspect-[3/4] transition-transform duration-500 group-hover:scale-105"
               />
 
               {/* Info Section */}
-              <div className="relative w-full text-center h-[70px] flex items-center justify-center">
+              /*<div className="relative w-full text-center h-[70px] flex items-center justify-center">
                 {/* Default state (name + role) */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
+                /*<div className="absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
                   <h3 className="text-xl font-semibold">{member.name}</h3>
                   <p className="text-sm text-gray-200">{member.role}</p>
                 </div>
 
                 {/* Hover state (social icons) */}
-                <div className="absolute inset-0 flex pt-6 items-center justify-center gap-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                /*<div className="absolute inset-0 flex pt-6 items-center justify-center gap-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   {member.linkedin && (
                     <a
                       href={member.linkedin}
@@ -133,3 +133,5 @@ const OurVision: React.FC = () => {
 };
 
 export default OurVision;
+
+*/

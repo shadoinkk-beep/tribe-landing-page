@@ -1,6 +1,6 @@
 import HeroSection from "@/components/aboutus/AboutHero";
 import OurValues from "@/components/aboutus/OurValues";
-import OurVision from "@/components/aboutus/OurVision";
+/*import OurVision from "@/components/aboutus/OurVision";*/
 import RisksCarousel from "@/components/home/RisksCarousel";
 
 export const metadata = {
@@ -29,7 +29,6 @@ export default function About() {
     <>
     <HeroSection/>
     <OurValues/>
-    <OurVision/>
     <RisksCarousel/>
 
     </>

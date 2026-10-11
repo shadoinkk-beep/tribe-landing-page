@@ -62,8 +62,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     ],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "403, Baani Address One, Sector 56, Golf Course Road",
-      "addressLocality": "Gurugram",
+      "streetAddress": "1209 - 1214B, 12th Floor, Tower 2, Magnum Global Business Park, Sector 52",
+      "addressLocality": "Gurgaon",
       "addressRegion": "Haryana",
       "postalCode": "122011",
       "addressCountry": "IN"

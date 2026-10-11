@@ -71,8 +71,8 @@ export default function Footer() {
               <li className="flex items-start gap-2">
                 <FiMapPin className="w-4 h-4 sm:w-8 sm:h-8 -mt-0.5" />
                 <span>
-                  403, Baani Address One, Sector 56, Golf Course Road <br />
-                  Gurugram, Haryana-122011
+                  1209 - 1214B, 12th Floor, Tower 2, Magnum Global Business <br />
+                  Park, Sector 52, Gurgaon 122011
                 </span>
               </li>
             </ul>

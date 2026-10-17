@@ -1,16 +1,16 @@
 import HeroSection from "@/components/aboutus/AboutHero";
 import OurValues from "@/components/aboutus/OurValues";
-/*import OurVision from "@/components/aboutus/OurVision";*/
+import OurVision from "@/components/aboutus/OurVision";
 import RisksCarousel from "@/components/home/RisksCarousel";
 
 export const metadata = {
   title: "About Us – Tribe Group",
   description:
-    "Tribe brings together 16+ years of real estate and finance expertise with a proven track record in farmhouse land, development and investor trust",
+    "Tribe brings together 16+ years of real estate and finance expertise with a proven track record in second-home land, development and investor trust",
   openGraph: {
     title: "About Us – Tribe Group",
     description:
-      "Tribe brings together 16+ years of real estate and finance expertise with a proven track record in farmhouse land, development and investor trust",
+      "Tribe brings together 16+ years of real estate and finance expertise with a proven track record in second-home land, development and investor trust",
     url: "https://tribegroup.in/about",
     images: [
       {
@@ -29,6 +29,7 @@ export default function About() {
     <>
     <HeroSection/>
     <OurValues/>
+    <OurVision/>
     <RisksCarousel/>
 
     </>

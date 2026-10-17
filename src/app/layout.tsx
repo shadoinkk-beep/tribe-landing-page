@@ -8,6 +8,9 @@ import Script from "next/script";
 import GoogleAnalytics from "./providers";
 import { Toaster } from "react-hot-toast";
 import { Suspense } from "react";
+
+const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700", "800"],
@@ -20,11 +23,11 @@ export const metadata: Metadata = {
     template: "%s | Tribe",
   },
   description:
-    "Find luxury apartments, villas, and premium projects with Tribe across India.",
+    "Find legally secure luxury second homes and premium land-backed projects with Tribe across India.",
   keywords: [
     "real estate",
-    "apartments",
-    "villas",
+    "second homes",
+    "land-backed projects",
     "luxury homes",
     "properties in India",
   ],
@@ -54,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@type": "RealEstateAgent",
     "name": "Tribe",
     "url": "https://tribegroup.in",
-    "logo": "https://tribegroup.in/tribe_logo.png",
+    "logo": "https://tribegroup.in/tribe-logo-dark.png",
     "sameAs": [
       "https://facebook.com/tribeestates",
       "https://instagram.com/tribeestates",
@@ -79,8 +82,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={bricolage.variable}>
       <head>
+        {gaId && (
+          <>
                 <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
           strategy="afterInteractive"
         />
         <Script id="gtag-init" strategy="afterInteractive">
@@ -88,11 +93,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+            gtag('config', '${gaId}', {
               page_path: window.location.pathname,
             });
           `}
         </Script>
+          </>
+        )}
       </head>
       <body>
                 <Suspense fallback={null}>
@@ -108,14 +115,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           toastOptions={{
             duration: 4000,
             style: {
-              background: "#111",
-              color: "#fff",
+              background: "#4B3D1A",
+              color: "#FBF0D9",
               borderRadius: "8px",
             },
             success: {
               iconTheme: {
-                primary: "#B47F2B",
-                secondary: "#fff",
+                primary: "#A47C3A",
+                secondary: "#FBF0D9",
               },
             },
           }}

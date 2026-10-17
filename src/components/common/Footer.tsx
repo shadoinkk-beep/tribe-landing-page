@@ -1,90 +1,127 @@
 // src/components/Footer.tsx
 
-import { BiMapPin } from "react-icons/bi";
+import Link from "next/link";
+import Image from "next/image";
 import { CgMail, CgPhone } from "react-icons/cg";
-import { FaFacebook, FaXTwitter } from "react-icons/fa6";
-import { FiInstagram, FiMapPin, FiTwitter } from "react-icons/fi";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FiInstagram, FiMapPin } from "react-icons/fi";
+
+const linkedinUrl = "https://www.linkedin.com/company/tribeestates/";
 
 export default function Footer() {
   return (
-    <footer className="container_section-white">
-<div className="container_content flex flex-col md:flex-row justify-between border-y">
-        
-        {/* Left: Logo & About */}
-        <div className="md:w-3/7 grid gap-6">
-          <div className="flex items-center gap-2 mb-3">
-            <img src="/Tribe_logo_text.png" className="h-16" alt="tribe logo" />
+    <footer className="bg-brown-deep text-light">
+      <div className="container_content">
+        <div className="grid gap-10 border-y border-cream-deep/20 py-12 lg:grid-cols-[1.1fr_1.4fr] lg:gap-16">
+          <div className="grid content-between gap-8">
+            <div className="grid gap-5">
+              <Image
+                src="/tribe-logo-white.png"
+                width={236}
+                height={80}
+                className="h-16 w-auto"
+                alt="Tribe logo"
+              />
+              <p className="max-w-md text-sm leading-relaxed text-cream-deep">
+                Tribe develops legally secure second-home communities across
+                North India, bringing together verified land, thoughtful design,
+                and resort-style living for long-term peace of mind.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <a
+                href={linkedinUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Tribe Group LinkedIn"
+                className="grid h-10 w-10 place-items-center rounded-full border border-cream-deep/30 text-cream transition hover:bg-cream hover:text-brown-deep"
+              >
+                <FaLinkedinIn className="h-4 w-4" />
+              </a>
+              <a
+                href="https://www.instagram.com/tribe_group_/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Tribe Instagram"
+                className="grid h-10 w-10 place-items-center rounded-full border border-cream-deep/30 text-cream transition hover:bg-cream hover:text-brown-deep"
+              >
+                <FiInstagram className="h-4 w-4" />
+              </a>
+            </div>
           </div>
-          <p className="text-sm text-gray-600 leading-relaxed max-w-md">
-            Tribe is a pioneering luxury farmhouse development company in North India, 
-            dedicated to creating timeless countryside retreats that embody elegance, 
-            comfort, and exclusivity.
-          </p>
-          {/* Social icons */}
-          <div className="flex gap-4 mt-4 text-gray-700">
-            <a href="#" aria-label="Twitter">
-              {/* <X/> */}
-              <FaXTwitter className="w-5 h-5" />
-            </a>
-            <a href="#" aria-label="Facebook">
-              <FaFacebook className="w-5 h-5" />
-            </a>
-            <a href="#" aria-label="Instagram">
-              <FiInstagram className="w-5 h-5" />
-            </a>
+
+          <div className="grid gap-8 sm:grid-cols-3">
+            <div>
+              <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-cream">
+                Company
+              </h3>
+              <ul className="grid gap-3 text-sm text-cream-deep">
+                <li>
+                  <Link className="transition hover:text-light" href="/#our_projects">
+                    Our Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link className="transition hover:text-light" href="/about">
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    className="transition hover:text-light"
+                    target="_blank"
+                    rel="noreferrer"
+                    href={linkedinUrl}
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-cream">
+                Expertise
+              </h3>
+              <ul className="grid gap-3 text-sm text-cream-deep">
+                <li>Land Aggregation</li>
+                <li>Due Diligence</li>
+                <li>Second-Home Development</li>
+                <li>Land Consulting</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-cream">
+                Contact
+              </h3>
+              <ul className="grid gap-3 text-sm text-cream-deep">
+                <li className="flex items-center gap-2">
+                  <CgMail className="h-4 w-4 shrink-0 text-cream" />
+                  Info@tribegroup.in
+                </li>
+                <li className="flex items-center gap-2">
+                  <CgPhone className="h-4 w-4 shrink-0 text-cream" />
+                  +91 91209 62233
+                </li>
+                <li className="flex items-start gap-2">
+                  <FiMapPin className="mt-0.5 h-4 w-4 shrink-0 text-cream" />
+                  <span>
+                    1209 - 1214B, 12th Floor, Tower 2, Magnum Global Business
+                    Park, Sector 52, Gurgaon 122011
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        {/* Right: Columns */}
-        <div className="md:w-3/7 grid grid-cols-1 sm:grid-cols-3 gap-4 ">
-          {/* Company */}
-          <div className="">
-            <h3 className="font-semibold text-lg mb-3">Company</h3>
-            <ul className=" grid gap-2 text-sm text-gray-700">
-              <li><a target="_blank" href="https://www.linkedin.com/company/tribeestates/">Our LinkedIn</a></li>
-              <li><a href="/#our_projects">Our Projects</a></li>
-              <li><a href="/about">About Us</a></li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="font-semibold text-lg mb-3">Our Services</h3>
-            <ul className="grid gap-2 text-sm text-gray-700">
-              <li><a href="#">Due Diligence</a></li>
-              <li><a href="#">Sales Strategy</a></li>
-              <li><a href="#">Land Acquisition</a></li>
-              <li><a href="#">Project Conceptualization</a></li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="font-semibold text-lg mb-3">Contact Us</h3>
-            <ul className="grid gap-2 text-sm text-gray-700">
-              <li className="flex items-center gap-2">
-                <CgMail className="w-4 h-4" /> Info@tribegroup.in
-              </li>
-              <li className="flex items-center gap-2">
-                <CgPhone className="w-4 h-4" /> +91 91209 62233
-              </li>
-              <li className="flex items-start gap-2">
-                <FiMapPin className="w-4 h-4 sm:w-8 sm:h-8 -mt-0.5" />
-                <span>
-                  1209 - 1214B, 12th Floor, Tower 2, Magnum Global Business <br />
-                  Park, Sector 52, Gurgaon 122011
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <p className="py-6 text-center text-xs text-cream-deep">
+          © Copyright {getCurrentYear()}, All Rights Reserved by Tribe
+        </p>
       </div>
-
-
-      <p className="text-center pt-6" >© Copyright {getCurrentYear()}, All Rights Reserved by Tribe</p>
-      
     </footer>
-
   );
 }
 

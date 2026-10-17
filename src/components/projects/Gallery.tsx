@@ -1,188 +1,91 @@
 "use client";
-import React, { FC, useState } from "react";
-import { AnimationOnScroll } from "react-animation-on-scroll";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import "react-image-gallery/styles/css/image-gallery.css";
-import ImageGallery from "react-image-gallery";
-import Link from "next/link";
-const originalClass = "h-96 aspect-video overflow-hidden object-contain";
 
+import Image from "next/image";
+import { FC, useState } from "react";
 
-interface images {
+interface GalleryImage {
   original: string;
   thumbnail: string;
   thumbnailClass: string;
   originalClass?: string;
 }
 
+const Gallery: FC<{ photos: GalleryImage[] }> = ({ photos }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [showAll, setShowAll] = useState(false);
 
-const images = [
-  {
-    original: "/gallery/3.png",
-    thumbnail: "/gallery/3.png",
-    thumbnailClass: "h-16 aspect-video overflow-hidden object-cover",
-    originalClass
+  if (!photos.length) return null;
 
-  },
-  {
-    original: "/gallery/4.png",
-    thumbnail: "/gallery/4.png",
-    thumbnailClass: "h-16 aspect-video overflow-hidden object-cover",
-    originalClass
-
-  },
-  {
-    original: "/gallery/5.png",
-    thumbnail: "/gallery/5.png",
-    thumbnailClass: "h-16 aspect-video overflow-hidden object-cover",
-    originalClass
-
-  },
-  {
-    original: "/gallery/6.png",
-    thumbnail: "/gallery/6.png",
-    thumbnailClass: "h-16 aspect-video overflow-hidden object-cover",
-    originalClass
-
-  },
-  {
-    original: "/gallery/7.png",
-    thumbnail: "/gallery/7.png",
-    thumbnailClass: "h-16 aspect-video overflow-hidden object-cover",
-    originalClass
-
-  },
-  
-]
-const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1
-  }
-};
-
-const Gallery:FC<{photos:images[]}> = ({photos}) => {
-
-
-  const [compact, setcompact] = useState(true)
+  const activePhoto = photos[activeIndex] ?? photos[0];
+  const visiblePhotos = showAll ? photos : photos.slice(0, 6);
 
   return (
     <section id="gallery" className="container_section-white">
-      <div className="container_content">
-    <div  className="space-y-10 z-10">
-      {/* Gallery Section */}
-{/* sticky top-16 bg-white/95 z-15 py-2 */}
-      <h2 className="text-4xl font-semibold mb-4 font-head ">Gallery</h2>
-      {compact &&
-      <section>
-        <div>
-
-        <div className="grid sm:grid-cols-3 gap-4 h-[400px]">
-           <AnimationOnScroll  style={{ backgroundImage: `url(${photos[0].original})` }} initiallyVisible className={`bg-gray-300 sm:col-span-1 row-span-2 h-full bg-contain`} delay={0}  key={0} animateIn="animate__fadeInUp" >
-
-  {/* <div ></div> */}
-           </AnimationOnScroll>
-            <AnimationOnScroll  style={{ backgroundImage: `url(${photos[1].original})` }} initiallyVisible className={`bg-gray-400 sm:col-span-2 h-full bg-contain`} delay={100}  key={1} animateIn="animate__fadeInUp" >
-
-  {/* <div ></div> */}
-            </AnimationOnScroll>
-             <AnimationOnScroll  style={{ backgroundImage: `url(${photos[2].original})` }} initiallyVisible  className={`bg-gray-500 sm:col-span-2 h-full bg-contain`} delay={200}  key={2} animateIn="animate__fadeInUp" >
-
-  {/* <div className="bg-gray-500 sm:col-span-2 h-full bg-[url('/images/develop.webp')]></div> */}
-             </AnimationOnScroll>
-</div>
-  <button onClick={()=>setcompact(false)}  className="button_black_bg mt-2">
-          View More
-        </button>
+      <div className="container_content grid gap-8">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="side_line relative mb-3 text-sm tracking-widest text-dark">
+              GALLERY
+            </p>
+            <h2 className="font-head text-4xl font-semibold text-brown-deep">
+              Project Gallery
+            </h2>
+          </div>
+          {photos.length > 6 && (
+            <button
+              type="button"
+              onClick={() => setShowAll((value) => !value)}
+              className="button_black_bg w-fit !rounded-none"
+            >
+              {showAll ? "View Less" : "View All"}
+            </button>
+          )}
         </div>
-      </section>}
 
-      {!compact &&
-    <>
+        <div className="grid gap-4 lg:grid-cols-[1.25fr_0.75fr]">
+          <div className="relative min-h-[320px] overflow-hidden rounded-lg bg-cream-deep sm:min-h-[520px]">
+            <Image
+              src={activePhoto.original}
+              alt="Project gallery image"
+              fill
+              sizes="(min-width: 1024px) 65vw, 100vw"
+              className="object-cover"
+              priority={activeIndex === 0}
+            />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brown-deep/65 to-transparent p-5 text-light">
+              <p className="text-sm font-medium">
+                {String(activeIndex + 1).padStart(2, "0")} /{" "}
+                {String(photos.length).padStart(2, "0")}
+              </p>
+            </div>
+          </div>
 
-
-    {/* <section className="relative">
-
-        <h2 className="text-3xl font-normal mb-4 font-head  py-4 z-10"> Photos </h2>
-        <ImageGallery slideInterval={1500}  slideDuration={300} thumbnailClass="h-24 aspect-video" items={images} />
-    </section> */}
-
-
-      {/* <section className="relative">
-        <h2 className="text-3xl font-semibold mb-4 font-head  py-4 z-10">Photos</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <AnimationOnScroll animateIn="animate__fadeInUp">
-        
-        <div className="sm:px-2  rounded-sm sm:mx-2 bg-[url('/images/strategy.webp')] h-74 bg-cover"></div>
-        </AnimationOnScroll>
-        <AnimationOnScroll  animateIn="animate__fadeInUp">
-        
-        <div className="sm:px-2 rounded-sm sm:mx-2 bg-[url('/images/manage.webp')] h-74 bg-cover"></div>
-        </AnimationOnScroll>
-        <AnimationOnScroll animateIn="animate__fadeInUp">
-        
-        <div className="sm:px-2 rounded-sm sm:mx-2 bg-[url('/images/develop.webp')] h-74 bg-cover">          </div>
-        </AnimationOnScroll>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-2">
+            {visiblePhotos.map((photo, index) => (
+              <button
+                key={`${photo.thumbnail}-${index}`}
+                type="button"
+                onClick={() => setActiveIndex(index)}
+                className={`relative aspect-[4/3] overflow-hidden rounded-md border transition ${
+                  activeIndex === index
+                    ? "border-brown-deep ring-2 ring-brown-soft"
+                    : "border-cream-deep hover:border-brown-soft"
+                }`}
+                aria-label={`Show gallery image ${index + 1}`}
+              >
+                <Image
+                  src={photo.thumbnail}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 20vw, 50vw"
+                  className="object-cover transition duration-500 hover:scale-105"
+                />
+              </button>
+            ))}
+          </div>
         </div>
-        </section> */}
-
-
-      {/* <section className="">
-        <h2  className="text-3xl font-normal mb-4 font-head">Videos</h2>
-        <Carousel autoPlaySpeed={1000} showDots containerClass="cursor-pointer"  arrows={false} partialVisbile focusOnSelect  responsive={responsive} infinite autoPlay className="gap-2 flex" >
-          <div className="sm:px-2 rounded-sm sm:mx-2 bg-[url('/images/strategy.webp')] h-74 bg-cover"></div>
-          <div className="sm:px-2 rounded-sm sm:mx-2 bg-[url('/images/manage.webp')] h-74 bg-cover"></div>
-          <div className="sm:px-2 rounded-sm sm:mx-2 bg-[url('/images/develop.webp')] h-74 bg-cover">          </div>
-
-        </Carousel>
-      
-
-      </section> */}
-
-
-      </>}
-    </div>
-
-    {!compact &&
-    <>
-      <section className="relative">
-
-        <h2 className="text-3xl font-normal mb-4 font-head  py-4 z-10 mx-auto text-black max-w-7xl px-6 md:px-10"> Photos </h2>
-        <ImageGallery useTranslate3D={false}  autoPlay  lazyload  slideInterval={1500}   thumbnailClass="h-24 aspect-video" items={photos} />
-    </section>
-      <section className="relative mt-6">
-
-        <h2 className="text-3xl font-normal mb-4 font-head  py-4 z-10 mx-auto text-black max-w-7xl px-6 md:px-10"> Videos </h2>
-        <ImageGallery useTranslate3D={false}  autoPlay  lazyload  slideInterval={1500}   thumbnailClass="h-24 aspect-video" items={photos} />
-    </section>
-
-          {/* View Less Button */}
-      <div className="flex justify-center">
-        <Link href={"#gallery"}>
-      <button onClick={()=>{setcompact(true)}} className="button_black_bg">
-          View Less
-        </button>
-        </Link>
       </div>
-      </>
-      }
-      </div>
-        </section>
-    
+    </section>
   );
 };
 

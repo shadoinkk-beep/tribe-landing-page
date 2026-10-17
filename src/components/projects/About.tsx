@@ -2,6 +2,7 @@
 
 import React, { FC } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const About: FC<{ image: string; name: string; about: string; brochure: string }> = ({
   name,
@@ -18,19 +19,21 @@ const About: FC<{ image: string; name: string; about: string; brochure: string }
 
   return (
     <section className="container_section-white !py-0">
-      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen bg-[#FBF0D9] font-sans overflow-hidden">
+      <div className="grid min-h-screen grid-cols-1 overflow-hidden bg-light font-head lg:grid-cols-2">
         {/* Left: Image */}
         <motion.div
-          className="w-full h-[60vh] lg:h-auto"
+          className="relative h-[60vh] w-full lg:h-auto"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.3 }}
         >
-          <img
+          <Image
             src={image}
             alt={name}
-            className="object-cover w-full h-full"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover"
           />
         </motion.div>
 
@@ -42,15 +45,15 @@ const About: FC<{ image: string; name: string; about: string; brochure: string }
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.3 }}
         >
-          <p className="text-sm text-dark tracking-widest mb-2 font-regular side_line relative">
+          <p className="eyebrow-copy text-dark mb-2 side_line relative">
             ABOUT US
           </p>
 
-          <h1 className="text-4xl font-semibold text-black mb-6 font-head">
+          <h1 className="heading-section mb-6 text-brown-deep">
             {name}
           </h1>
 
-          <p className="text-black leading-relaxed mb-8 font-regular">
+          <p className="subtitle-copy mb-8">
             {about}
           </p>
 

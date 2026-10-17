@@ -18,7 +18,7 @@ const FAQ: React.FC = () => {
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
         Frequently Asked Questions
       </h2>
-      <div className="divide-y divide-gray-300">
+      <div className="divide-y divide-cream-deep">
         {faqData.map((item, index) => (
           <div key={index} className={`${activeIndex === index ? "shadow-2xl rounded-md" : ""} px-2 overflow-hidden`}>
             <button
@@ -37,7 +37,7 @@ const FAQ: React.FC = () => {
               )}
             </button>
             {/* {activeIndex === index && ( */}
-              <div className={`${activeIndex === index ? "py-4 h-fit" : "" } text-gray-700 h-0 transition-all duration-300`}>{item.answer}</div>
+              <div className={`${activeIndex === index ? "py-4 h-fit" : "" } text-brown h-0 transition-all duration-300`}>{item.answer}</div>
             {/* )} */}
           </div>
         ))}

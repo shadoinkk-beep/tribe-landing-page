@@ -1,52 +1,26 @@
-/*"use client";
+"use client";
 
 import React from "react";
 import { motion, Variants } from "framer-motion";
-import { FaLinkedinIn, Fawebsite } from "react-icons/fa";
-import { MdLanguage } from "react-icons/md";
+import Image from "next/image";
 
-interface TeamMember {
-  name: string;
-  role: string;
-  image: string;
-  linkedin?: string;
-  website?: string;
-}
+const articleUrl = "https://businesstodayglobal.com/tribe-designing-life-outdoors/";
 
-const team: TeamMember[] = [
-  {
-    name: "Ishmeet Singh Raina",
-    role: "Partner Tribe Group",
-    image: "vision_ishmeet_singh_raina.jpg",
-    linkedin: "https://www.linkedin.com/in/ishmeet-singh-raina/",
-    website: "https://alchemylandbase.com",
-  },
-  {
-    name: "Charu Verma",
-    role: "Partner Tribe Group",
-    image: "/vision_charu_verma.jpg",
-    linkedin: "https://www.linkedin.com/in/ishmeet-singh-raina/",
-    website: "https://alchemylandbase.com",
-  },
-  {
-    name: "Vidit Vineet Singh",
-    role: "Partner Tribe Group",
-    image: "/vision_vidit_vineet_singh.jpg",
-    linkedin: "https://www.linkedin.com/in/vidit-vineet-singh-7220b819/",
-    website: "https://xcis.in",
-  },
-];
-
-// Animation Variants
 const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 32 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
 const container: Variants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.2 } },
+  visible: { transition: { staggerChildren: 0.16 } },
 };
+
+const principles = [
+  "Legally clear land and responsible approvals",
+  "Retreats designed around family, wellness, and nature",
+  "Long-term stewardship that protects value after handover",
+];
 
 const OurVision: React.FC = () => {
   return (
@@ -57,75 +31,87 @@ const OurVision: React.FC = () => {
       viewport={{ once: false, amount: 0.2 }}
     >
       <motion.div className="container_content" variants={container}>
-        {/* Header *//*}
-        <motion.h2
-          className="text-5xl lg:text-7xl font-bold mb-6 text-left text-black"
+        <motion.div
+          className="overflow-hidden rounded-[28px] border border-brown-soft/20 bg-[#FFF7E8] shadow-[0_24px_70px_rgba(43,36,18,0.12)]"
           variants={fadeUp}
         >
-          Our Vision
-        </motion.h2>
-
-        <motion.p
-          className="text-gray-800 text-left mb-12 leading-relaxed max-w-4xl"
-          variants={fadeUp}
-        >
-          At TRIBE, our vision is simple: to redefine farmhouse ownership by
-          uniting law, lifestyle, and legacy. Through Xcis, we safeguard every
-          investment with rigorous compliance and due diligence. Through Alchemy
-          Landbase, we deliver luxury farmhouse communities that are
-          lifestyle-ready and future-proof. Together as TRIBE, we promise growth
-          without compromise.
-        </motion.p>
-
-        {/* Team Grid *//*}
-        <motion.div className="grid md:grid-cols-3 gap-8" variants={container}>
-          {team.map((member, index) => (
-            <motion.div
-              key={index}
-              className="bg-[#4B3D1A] text-white pb-4 rounded-2xl shadow-lg p-1 flex flex-col items-center overflow-hidden group relative"
-              variants={fadeUp}
-            >
-              {/* Image */}
-              /*<img
-                src={member.image}
-                alt={member.name}
-                className="rounded-2xl  w-full object-cover aspect-[3/4] transition-transform duration-500 group-hover:scale-105"
+          <div className="grid min-h-[560px] lg:grid-cols-[1.04fr_0.96fr]">
+            <div className="relative min-h-[340px] overflow-hidden bg-brown-deep lg:min-h-full">
+              <Image
+                src="/tribe-founders-collective.jpg"
+                alt="TRIBE founders featured in Business Today Global"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-right"
+                priority
               />
-
-              {/* Info Section */}
-              /*<div className="relative w-full text-center h-[70px] flex items-center justify-center">
-                {/* Default state (name + role) */}
-                /*<div className="absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
-                  <h3 className="text-xl font-semibold">{member.name}</h3>
-                  <p className="text-sm text-gray-200">{member.role}</p>
-                </div>
-
-                {/* Hover state (social icons) */}
-                /*<div className="absolute inset-0 flex pt-6 items-center justify-center gap-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  {member.linkedin && (
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 bg-white/10 hover:bg-white/20 rounded-full transition"
-                    >
-                      <FaLinkedinIn className="text-white text-xl" />
-                    </a>
-                  )}
-                  {member.website && (
-                    <a
-                      href={member.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 bg-white/10 hover:bg-white/20 rounded-full transition"
-                    >
-                      <MdLanguage className="text-white text-xl" />
-                    </a>
-                  )}
-                </div>
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(43,36,18,0.28),rgba(63,74,39,0.06))]" />
+              <div className="absolute bottom-5 left-5 rounded-full bg-light/90 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-brown-deep">
+                Founders of TRIBE
               </div>
-            </motion.div>
-          ))}
+            </div>
+
+            <div className="flex items-center px-6 py-10 sm:px-10 lg:px-14 lg:py-16">
+              <motion.div className="max-w-xl" variants={container}>
+                <motion.p
+                  className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-brown-soft"
+                  variants={fadeUp}
+                >
+                  Our Vision
+                </motion.p>
+
+                <motion.h2
+                  className="text-[clamp(2.5rem,5vw,5.25rem)] font-semibold leading-[0.95] text-brown-deep"
+                  variants={fadeUp}
+                >
+                  Designing life outdoors.
+                </motion.h2>
+
+                <motion.p
+                  className="mt-6 text-xl font-medium leading-snug text-brown-deep sm:text-2xl"
+                  variants={fadeUp}
+                >
+                  TRIBE exists to give families room to grow, breathe, and build
+                  a legacy without trading away clarity or trust.
+                </motion.p>
+
+                <motion.p
+                  className="mt-5 text-base leading-relaxed text-brown sm:text-lg"
+                  variants={fadeUp}
+                >
+                  Inspired by the Business Today Global feature, our vision is
+                  rooted in Growth without Compromise: every retreat must respect
+                  law, lifestyle, and long-term capital at once. From discovery
+                  and due diligence to design, delivery, and stewardship, TRIBE
+                  turns farmhouse ownership into a complete, responsible
+                  experience.
+                </motion.p>
+
+                <motion.div className="mt-7 grid gap-3" variants={container}>
+                  {principles.map((principle) => (
+                    <motion.div
+                      key={principle}
+                      className="flex items-start gap-3 text-sm font-medium text-brown-deep sm:text-base"
+                      variants={fadeUp}
+                    >
+                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-brown-soft" />
+                      <span>{principle}</span>
+                    </motion.div>
+                  ))}
+                </motion.div>
+
+                <motion.a
+                  href={articleUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-8 inline-flex rounded-lg border border-dark bg-dark px-5 py-3 text-sm font-semibold text-light transition hover:bg-brown-deep"
+                  variants={fadeUp}
+                >
+                  Read the feature
+                </motion.a>
+              </motion.div>
+            </div>
+          </div>
         </motion.div>
       </motion.div>
     </motion.section>
@@ -133,5 +119,3 @@ const OurVision: React.FC = () => {
 };
 
 export default OurVision;
-
-*/

@@ -67,20 +67,20 @@ const photos = [
 ]
 
 export const metadata: Metadata = {
-  title: "Whispering Woods – Luxury Community Farmhouses | Tribe Group",
+  title: "Whispering Woods – Luxury Community Second Homes | Tribe Group",
   description:
-    "Whispering Woods by Tribe Group – luxury 2 BHK & 3 BHK farmhouses near Siliserh Lake, Alwar. Enjoy nature, modern amenities, and resort-style living surrounded by greenery.",
+    "Whispering Woods by Tribe Group – luxury 2 BHK & 3 BHK second homes near Siliserh Lake, Alwar. Enjoy nature, modern amenities, and resort-style living surrounded by greenery.",
   openGraph: {
-    title: "Whispering Woods – Luxury Community Farmhouses",
+    title: "Whispering Woods – Luxury Community Second Homes",
     description:
-      "Discover Whispering Woods – premium 2 & 3 BHK farmhouses with pools, lush surroundings, adventure park, and clubhouse near Delhi–Mumbai Expressway.",
+      "Discover Whispering Woods – premium 2 & 3 BHK second homes with pools, lush surroundings, adventure park, and clubhouse near Delhi–Mumbai Expressway.",
     url: "https://tribegroup.in/projects/whispering-woods",
     images: [
       {
-        url: "https://www.tribegroup.in/projects/whisperingwoods/main.jpg",
+        url: "https://www.tribegroup.in/projects/whisperingwoods/main.webp",
         width: 1200,
         height: 630,
-        alt: "Whispering Woods – Luxury Farmhouses in Alwar",
+        alt: "Whispering Woods – Luxury Second Homes in Alwar",
       },
     ],
   },
@@ -88,20 +88,20 @@ export const metadata: Metadata = {
 
 export default function WhisperingWoodsPage() {
   const project = {
-    title: "Whispering Woods – Luxury Community Farmhouses",
-    desc: "Nestled near the scenic Siliserh Lake in Alwar, Whispering Woods is a premium community farmhouse development by Tribe Group. Offering 2 BHK and 3 BHK farmhouses with private pools and green surroundings, the project combines luxury living with nature-inspired design. Located just a short drive from the 85 KM exit on the Delhi–Mumbai Expressway, it provides easy connectivity and serene escape.",
+    title: "Whispering Woods – Luxury Community Second Homes",
+    desc: "Nestled near the scenic Siliserh Lake in Alwar, Whispering Woods is a premium community second-home development by Tribe Group. Offering 2 BHK and 3 BHK homes with private pools and green surroundings, the project combines luxury living with nature-inspired design. Located just a short drive from the 85 KM exit on the Delhi–Mumbai Expressway, it provides easy connectivity and serene escape.",
     slug: "whispering-woods",
     location: "Alwar, Rajasthan (near Delhi–Mumbai Expressway, 85KM exit)",
     configurations: [
       {
-        name: "2 BHK + Store Farmhouse with Pool",
+        name: "2 BHK + Store Second Home with Pool",
         plotArea: "13,600 sq.ft",
         builtUpArea: "1,250 sq.ft",
         poolArea: "260 sq.ft",
         estimatedEarnings: "₹11,25,600 – ₹13,50,720 per year",
       },
       {
-        name: "3 BHK + Store Farmhouse with Pool",
+        name: "3 BHK + Store Second Home with Pool",
         plotArea: "27,225 sq.ft",
         builtUpArea: "2,172 sq.ft",
         poolArea: "494 sq.ft",
@@ -128,7 +128,7 @@ export default function WhisperingWoodsPage() {
       price: config.estimatedEarnings.replace(/[^0-9]/g, ""),
       availability: "https://schema.org/InStock",
     })),
-    image: [`https://tribegroup.in/projects/whisperingwoods/main.jpg`],
+    image: [`https://tribegroup.in/projects/whisperingwoods/main.webp`],
     additionalProperty: [
       { "@type": "PropertyValue", name: "Location", value: project.location },
       {
@@ -217,10 +217,10 @@ export default function WhisperingWoodsPage() {
     </section> */}
       {/* JSON-LD Structured Data */}
 
-    <HighlightSection name="Whispering Woods" address="Naogaon, Delhi - Mumbai Expressway" bg="/projects/whisperingwoods/main.jpg" />
+    <HighlightSection name="Whispering Woods" address="Naogaon, Delhi - Mumbai Expressway" bg="/projects/whisperingwoods/main.webp" />
 
     <About brochure="/Whispering Woods_10Jun Update.pdf" image="/images/overview.webp" name="Whispering Woods" about="Experience the pinnacle of luxury living at Whispering Woods Luxury Micro
-          Farmhouses by Tribe Group. Set amidst tranquil landscapes, this exclusive
+          Second Homes by Tribe Group. Set amidst tranquil landscapes, this exclusive
           development offers a refined lifestyle like no other. Ideally located off the
           Delhi-Jaipur Expressway, Whispering Woods provides seamless connectivity while
           serving as a peaceful escape from the city's fast pace." />

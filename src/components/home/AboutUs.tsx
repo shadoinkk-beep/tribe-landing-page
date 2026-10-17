@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function AboutUs() {
   // Track if section is in view
@@ -26,13 +27,13 @@ export default function AboutUs() {
             viewport={{ once: false }}
             className="space-y-8 grid gap-6 content-between h-full"
           >
-            <h2 className="text-5xl">About Us</h2>
+            <h2 className="heading-section text-light">About Us</h2>
 
             {/* Overlapping Circles */}
             <div className="flex items-center justify-start">
               <div className="relative flex">
                 {/* Circle 1 */}
-                <div className="aspect-square h-48 sm:h-50 md:h-60 lg:h-64 rounded-full border border-white flex flex-col items-center justify-center text-left z-10">
+                <div className="aspect-square h-48 sm:h-50 md:h-60 lg:h-64 rounded-full border border-light flex flex-col items-center justify-center text-left z-10">
                   <span className="text-2xl  md:text-5xl font-normal">
                     {startCount ? (
                       <CountUp start={0} className="" end={100} duration={2} suffix="+" />
@@ -44,10 +45,10 @@ export default function AboutUs() {
                 </div>
 
                 {/* Circle 2 (overlapping) */}
-                <div className="aspect-square h-48 sm:h-50 md:h-60 lg:h-64 rounded-full border border-white flex flex-col items-center justify-center text-left !-ml-8">
+                <div className="aspect-square h-48 sm:h-50 md:h-60 lg:h-64 rounded-full border border-light flex flex-col items-center justify-center text-left !-ml-8">
                   <span className=" text-2xl md:text-5xl font-normal">
                     {startCount ? (
-                      <CountUp start={0} end={2} duration={2} suffix="+" />
+                      <CountUp start={0} end={3} duration={2} suffix="+" />
                     ) : (
                       "0+"
                     )}
@@ -57,10 +58,10 @@ export default function AboutUs() {
               </div>
             </div>
 
-            <p className="text-sm text-gray-300 leading-relaxed">
-              TRIBE is India’s first integrated farmhouse ecosystem—uniting
-              compliance, development, and advisory to remove risks from land
-              deals. With Xcis and Alchemy Landbase, we deliver farmhouses that
+            <p className="subtitle-copy-light text-sm sm:text-base">
+              TRIBE is India’s first integrated second-home ecosystem—uniting
+              compliance, land aggregation, development, and advisory to remove risks from land
+              deals. With Xcis and Alchemy Landbase, we deliver second homes that
               are legally secure, lifestyle-ready, and built to last as legacy
               assets.
             </p>
@@ -75,20 +76,22 @@ export default function AboutUs() {
             className="grid gap-3"
           >
             {/* Card 1 */}
-            <div className="relative rounded-xl overflow-hidden shadow-lg">
-              <img
+            <div className="relative h-72 overflow-hidden rounded-lg shadow-lg">
+              <Image
                 src="/aboutus_hero_img1.jpg"
-                alt="Farmhouse"
-                className="w-full h-72 object-cover"
+                alt="Second-home community"
+                fill
+                sizes="(max-width: 1024px) 92vw, 44vw"
+                className="object-cover"
               />
-              <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-6">
+              <div className="absolute inset-0 bg-brown-deep/45 flex flex-col justify-end p-6">
                 <h3 className="text-lg font-semibold">
-                  India’s First Farmhouse Ecosystem
+                  India’s First Second-Home Ecosystem
                 </h3>
-                <p className="text-sm text-gray-200 mt-2">
-                  TRIBE brings together compliance, development, and investor
+                <p className="text-sm text-cream-deep mt-2">
+                  TRIBE brings together compliance, land aggregation, development, and investor
                   advisory under one roof. We were created to solve the risks
-                  that collapse most farmhouse deals and deliver ownership that
+                  that collapse most second-home land deals and deliver ownership that
                   is both secure and seamless.
                 </p>
                 <a
@@ -101,17 +104,19 @@ export default function AboutUs() {
             </div>
 
             {/* Card 2 */}
-            <div className="relative rounded-xl overflow-hidden shadow-lg">
-              <img
+            <div className="relative h-72 overflow-hidden rounded-lg shadow-lg">
+              <Image
                 src="/aboutus_hero_img2.jpg"
                 alt="Landscape"
-                className="w-full h-72 object-cover"
+                fill
+                sizes="(max-width: 1024px) 92vw, 44vw"
+                className="object-cover"
               />
-              <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-6">
+              <div className="absolute inset-0 bg-brown-deep/45 flex flex-col justify-end p-6">
                 <h3 className="text-lg font-semibold">Law. Lifestyle. Legacy.</h3>
-                <p className="text-sm text-gray-200 mt-2">
+                <p className="text-sm text-cream-deep mt-2">
                   Through Xcis (compliance & advisory) and Alchemy Landbase
-                  (farmhouse development), TRIBE ensures every project is
+                  (land aggregation), TRIBE ensures every project is
                   legally clean and lifestyle-ready. For investors, this means
                   peace of mind and a true legacy asset.
                 </p>

@@ -12,20 +12,20 @@ import { Metadata } from "next";
 
 const originalClass = "h-96 aspect-video overflow-hidden object-contain";
 export const metadata: Metadata = {
-  title: "Ananta – Luxury Micro Farmhouses | Tribe Group",
+  title: "Ananta – Luxury Micro Second Homes | Tribe Group",
   description:
-    "Discover Ananta – Luxury Micro Farmhouses nestled near the Aravallis. Featuring 2.5 BHK farmhouses with private pools, sustainable design, and modern amenities.",
+    "Discover Ananta – Luxury Micro Second Homes nestled near the Aravallis. Featuring 2.5 BHK homes with private pools, sustainable design, and modern amenities.",
   openGraph: {
-    title: "Ananta – Luxury Micro Farmhouses",
+    title: "Ananta – Luxury Micro Second Homes",
     description:
-      "Experience the life of your dreams with Ananta’s 2.5 BHK micro-farmhouses featuring private pools, stunning Aravalli views, and premium facilities.",
+      "Experience the life of your dreams with Ananta’s 2.5 BHK micro second homes featuring private pools, stunning Aravalli views, and premium facilities.",
     url: "https://tribegroup.in/projects/ananta",
     images: [
       {
         url: "https://www.tribegroup.in/projects/ananta/main.webp",
         width: 1200,
         height: 630,
-        alt: "Ananta – Luxury Micro Farmhouses",
+        alt: "Ananta – Luxury Micro Second Homes",
       },
     ],
   },
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
 
 export default function ProjectAnantaPage() {
   const project = {
-    title: "Ananta – Luxury Micro Farmhouses",
-    desc: "Ananta is a luxury micro-farmhouse community nestled near the Aravallis. Inspired by Santorini’s rustic blue and porcelain white architecture, each farmhouse offers a 2.5 BHK layout with a private pool, modern amenities, and serene natural surroundings. Located just 750 meters from the highway, with Phase 1 and 2 already delivered, Ananta redefines retreat living.",
+    title: "Ananta – Luxury Micro Second Homes",
+    desc: "Ananta is a luxury micro second-home community nestled near the Aravallis. Inspired by Santorini’s rustic blue and porcelain white architecture, each home offers a 2.5 BHK layout with a private pool, modern amenities, and serene natural surroundings. Located just 750 meters from the highway, with Phase 1 and 2 already delivered, Ananta redefines retreat living.",
     price: "14500000", // sample average price (INR)
     slug: "ananta",
     location: "Near Aravallis, Gurugram–Jaipur Electric Corridor",
@@ -44,7 +44,7 @@ export default function ProjectAnantaPage() {
   };
 
   const amenities = [
-    "2.5 BHK micro-farmhouses with private pools",
+    "2.5 BHK micro second homes with private pools",
     "Aangan – a vibrant clubhouse with restaurant & coffee house",
     "Multipurpose hall and amphitheatre",
     "Fully equipped gymnasium",
@@ -74,6 +74,7 @@ export default function ProjectAnantaPage() {
       { "@type": "PropertyValue", name: "Plot Area", value: project.plotArea },
       { "@type": "PropertyValue", name: "Private Pool", value: project.poolSize },
       { "@type": "PropertyValue", name: "Location", value: project.location },
+      { "@type": "PropertyValue", name: "Amenities", value: amenities.join(", ") },
     ],
   };
 
@@ -83,7 +84,7 @@ export default function ProjectAnantaPage() {
     <>
     <HighlightSection name="Ananta" address="Off Delhi - Jaipur Expressway" bg="/projects/ananta/main.webp" />
 
-    <About brochure="/Ananta - Luxury Micro Farmhouses .pdf" name="Ananta" image="/images/ananta-farms.webp" about="The rustic blue beautifully contrasting with porcelain white overlooking a vista of greens and a cool blue pool, the farmhouse design is inspired by the Greek island houses in Santorini." />
+    <About brochure="/Ananta - Luxury Micro Farmhouses .pdf" name="Ananta" image="/images/ananta-farms.webp" about="The rustic blue beautifully contrasting with porcelain white overlooking a vista of greens and a cool blue pool, the second-home design is inspired by the Greek island houses in Santorini." />
     <ProjectHighlight/>
     <PriceList/>
     <Amenites/>
@@ -101,7 +102,11 @@ export default function ProjectAnantaPage() {
 
     <Gallery photos={photos}   />
     <FAQ/>
-    <OtherProject name="Whispering Woods" image="/projects/whisperingwoods/main.jpg"  alt="Whispering Woods" url="/projects/whisperingwoods" />
+    <OtherProject name="Whispering Woods" image="/projects/whisperingwoods/main.webp"  alt="Whispering Woods" url="/projects/whisperingwoods" />
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }}
+    />
     </>
   );
 }

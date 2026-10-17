@@ -17,9 +17,9 @@ type Dot = {
 
 const HeroSection: React.FC = () => {
   const cards: Card[] = [
-    { text: "We", bgColor: "bg-[#123622] text-white" },
+    { text: "We", bgColor: "bg-dark text-light" },
     { text: "De-Risk", image: "/De-Risk.jpg" },
-    { text: "Every", bgColor: "bg-[#123622] text-white" },
+    { text: "Every", bgColor: "bg-dark text-light" },
     { text: "Investment", image: "/Investment.jpg" },
   ];
 
@@ -74,7 +74,7 @@ const HeroSection: React.FC = () => {
             src={d.src}
             alt=""
             aria-hidden="true"
-            className={`hidden md:block absolute ${d.posClass} ${d.sizeClass ?? "w-12 h-12"} rounded-full object-cover border-2 border-white shadow-lg pointer-events-none z-0`}
+            className={`hidden md:block absolute ${d.posClass} ${d.sizeClass ?? "w-12 h-12"} rounded-full object-cover border-2 border-light shadow-lg pointer-events-none z-0`}
             custom={i}
             initial="hidden"
             whileInView="visible"
@@ -91,20 +91,20 @@ const HeroSection: React.FC = () => {
           viewport={{ once: false, amount: 0.3 }}
         >
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-black mb-4 leading-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-brown-deep mb-4 leading-tight"
             variants={fadeUp}
           >
-            India’s First Premium Integrated
+            India’s First Premium Integrated{" "}
             <br />
-            Farmhouse Ecosystem
+            Second-Home Ecosystem
           </motion.h1>
 
           <motion.p
-            className="max-w-3xl mx-auto text-base md:text-lg text-black/80 mb-8"
+            className="max-w-3xl mx-auto text-base md:text-lg text-brown mb-8"
             variants={fadeUp}
           >
-            TRIBE unites compliance, development, and advisory—removing risks from
-            farmhouse ownership and transforming investments into lasting legacies.
+            TRIBE unites compliance, land aggregation, development, and advisory—removing risks from
+            second-home ownership and transforming investments into lasting legacies.
           </motion.p>
 
           {/* Buttons */}
@@ -114,7 +114,7 @@ const HeroSection: React.FC = () => {
           > 
           <Link href={"#ourvalues"} >
             <motion.button
-              className="px-6 cursor-pointer py-2 rounded-full border border-black bg-transparent hover:bg-black hover:text-white transition z-10"
+              className="px-6 cursor-pointer py-2 rounded-full border border-dark bg-transparent text-dark hover:bg-dark hover:text-light transition z-10"
               whileHover={{ scale: 1.05 }}
               >
               Explore Now
@@ -122,7 +122,7 @@ const HeroSection: React.FC = () => {
                  </Link>
                  <Link href={"#ourvalues"} >
             <motion.button
-              className="text-black underline underline-offset-4 hover:opacity-80 z-10"
+              className="text-dark underline underline-offset-4 hover:opacity-80 z-10"
               whileHover={{ scale: 1.05 }}
               >
               Learn more
@@ -155,10 +155,10 @@ const HeroSection: React.FC = () => {
               variants={cardVariants}
               whileHover="hover"
             >
-              {card.image && <div className="absolute inset-0 bg-black/30" aria-hidden />}
+              {card.image && <div className="absolute inset-0 bg-brown-deep/35" aria-hidden />}
               <span
                 className={`relative z-10 text-2xl md:text-3xl font-normal ${
-                  card.bgColor?.includes("text-white") || card.image ? "text-white" : "text-black"
+                  card.bgColor?.includes("text-light") || card.image ? "text-light" : "text-brown-deep"
                 }`}
               >
                 {card.text}

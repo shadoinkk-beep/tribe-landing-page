@@ -5,6 +5,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type CardProps = {
   title: string;
@@ -65,7 +66,7 @@ const responsive = {
 };
 
 const RisksCarousel: React.FC = () => {
-  const carouselRef = useRef<any>(null);
+  const carouselRef = useRef<InstanceType<typeof Carousel> | null>(null);
 
   return (
     <section className="container_section-white relative">
@@ -73,7 +74,7 @@ const RisksCarousel: React.FC = () => {
         {/* Heading + Arrows */}
         <div className="flex items-start justify-between mb-10 relative">
           <motion.h2
-            className="text-2xl md:text-3xl font-semibold "
+            className="heading-section max-w-3xl text-brown-deep"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
@@ -87,15 +88,15 @@ const RisksCarousel: React.FC = () => {
           <div className="flex gap-3 mt-2">
             <button
               aria-label="Previous Slide"
-              onClick={() => carouselRef.current?.previous()}
-              className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full border border-black hover:bg-black hover:text-white transition"
+              onClick={() => carouselRef.current?.previous(1)}
+              className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full border border-dark text-dark hover:bg-dark hover:text-light transition"
             >
               <FaArrowLeft size={16} />
             </button>
             <button
               aria-label="Next Slide"
-              onClick={() => carouselRef.current?.next()}
-              className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full border border-black hover:bg-black hover:text-white transition"
+              onClick={() => carouselRef.current?.next(1)}
+              className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full border border-dark text-dark hover:bg-dark hover:text-light transition"
             >
               <FaArrowRight size={16} />
             </button>
@@ -120,10 +121,12 @@ const RisksCarousel: React.FC = () => {
               viewport={{ once: false, amount: 0.3 }}
             >
               {/* Background Image */}
-              <img
+              <Image
                 src={card.image}
                 alt={card.title}
-                className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
+                fill
+                sizes="(max-width: 640px) 92vw, (max-width: 1024px) 46vw, 30vw"
+                className="object-cover transition duration-500 group-hover:scale-105"
               />
 
               {/* Overlay */}
@@ -131,16 +134,16 @@ const RisksCarousel: React.FC = () => {
 
               {/* Content */}
               <motion.div
-                className="absolute bottom-4 p-4 w-full text-white"
+                className="absolute bottom-4 p-4 w-full text-light"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: false }}
               >
-                <span className="bg-[#4B3D1A] text-white text-xs px-2 py-1 rounded-xl border border-white/40">
+                <span className="bg-dark text-light text-xs px-2 py-1 rounded-xl border border-light/40">
                   {card.tag}
                 </span>
-                <p className="text-white text-sm mt-4 leading-relaxed opacity-90">
+                <p className="text-light text-sm mt-4 leading-relaxed opacity-90">
                   {card.description}
                 </p>
               </motion.div>

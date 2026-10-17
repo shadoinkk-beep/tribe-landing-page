@@ -2,8 +2,8 @@
 
 import { FC } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
 const OtherProject: FC<{
   image: string;
@@ -16,7 +16,7 @@ const OtherProject: FC<{
     <section className="container_section-green">
 
     <div className="container_content">
-      <h2 className="text-4xl font-semibold mb-4 font-head text-white">
+      <h2 className="text-4xl font-semibold mb-4 font-head text-light">
         Other Projects
       </h2>
 
@@ -29,22 +29,24 @@ const OtherProject: FC<{
         viewport={{ once: true, amount: 0.3 }}
       >
         {/* Image */}
-        <img
+        <Image
           src={image}
           alt={alt}
+          width={1200}
+          height={700}
           className="w-full h-auto brightness-80 transition-transform duration-700 group-hover:scale-105"
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 text-white flex flex-col justify-end p-6 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
+        <div className="absolute inset-0 text-light flex flex-col justify-end p-6 bg-gradient-to-t from-brown-deep/70 via-brown-deep/20 to-transparent">
           <h3 className="text-2xl font-semibold mb-1 font-head">{name}</h3>
           <p className="text-base mb-4 max-w-md">
-            A luxurious 2.5 BHK farmhouse with a private pool, lush gardens,
+            A luxurious second-home destination with private spaces, lush gardens,
             modern amenities, and tranquility.
           </p>
           <Link
             href={url}
-            className="self-start border border-white cursor-pointer hover:border-dark hover:text-dark text-sm font-medium px-4 py-1 rounded-md transition"
+            className="self-start border border-light cursor-pointer hover:bg-light hover:border-light hover:text-dark text-sm font-medium px-4 py-1 rounded-md transition"
           >
             Explore Now
           </Link>

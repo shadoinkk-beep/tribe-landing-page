@@ -1,5 +1,3 @@
-import ContactForm from "@/components/common/Contact";
-import Footer from "@/components/common/Footer";
 import AboutUs from "@/components/home/AboutUs";
 import FeatureHero from "@/components/home/FeaturesHero";
 import Hero from "@/components/home/Hero";
@@ -7,12 +5,12 @@ import RisksCarousel from "@/components/home/RisksCarousel";
 import ProjectHero from "@/components/projects/ProjectsHero";
 
 export const metadata = {
-  title: "TRIBE : Luxury Farmhouses in India",
+  title: "TRIBE : Luxury Second Homes in India",
   description:
-    "Discover premium farmhouses projects across India with Tribe Group.",
+    "Discover premium second-home projects across India with Tribe Group.",
   openGraph: {
-    title: "TRIBE : Luxury Farmhouses in India",
-    description: "Discover premium farmhouses projects across India with Tribe Group.",
+    title: "TRIBE : Luxury Second Homes in India",
+    description: "Discover premium second-home projects across India with Tribe Group.",
     url: "https://tribegroup.in",
     images: [
       {

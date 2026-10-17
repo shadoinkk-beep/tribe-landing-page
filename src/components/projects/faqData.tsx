@@ -10,7 +10,7 @@ export interface FaqItem {
     {
       question: 'What is Whispering Woods?',
       answer:
-        'Whispering Woods is a luxury farmhouse community developed by the Tribe Group, offering 2.5 and 3.5 BHK farmhouses with private pools, set within a gated, eco-friendly estate off the Delhi-Mumbai Expressway.',
+        'Whispering Woods is a luxury second-home community developed by the Tribe Group, offering 2.5 and 3.5 BHK homes with private pools, set within a gated, eco-friendly estate off the Delhi-Mumbai Expressway.',
     },
     {
       question: 'Where is it located?',
@@ -18,7 +18,7 @@ export interface FaqItem {
         'The project is situated in Naugaon, Rajasthan, approximately 85 minutes from Rajiv Chowk, Gurgaon, via the Delhi-Mumbai Expressway.',
     },
     {
-      question: 'What are the available farmhouse sizes and configurations?',
+      question: 'What are the available second-home sizes and configurations?',
       answer: (
         <ul className="list-disc ml-6 space-y-1">
           <li>2.5 BHK: Built-up area of 1,510 Sq. Yards* on a 13,600 Sq. Yards* plot.</li>
@@ -39,19 +39,19 @@ export interface FaqItem {
       answer: 'Yes, a 50:50 payment plan is offered—50% at booking and 50% at possession.',
     },
     {
-      question: 'Can I earn rental income from my farmhouse?',
+      question: 'Can I earn rental income from my second home?',
       answer:
         'Yes, Whispering Woods has partnered with StayVista for leasing and hospitality services, offering potential rental income of up to ₹16,00,320 per year.',
     },
     {
-      question: 'Are the farmhouses eco-friendly?',
+      question: 'Are the second homes eco-friendly?',
       answer:
         'Yes, they feature zero-maintenance construction with a 50+ year lifespan, promoting sustainable living.',
     },
     {
-      question: 'Can non-agriculturists purchase these farmhouses?',
+      question: 'Can non-agriculturists purchase these second homes?',
       answer:
-        'Yes, under Rajasthan’s Tenancy Act, non-agriculturists can own farmhouses, provided they obtain the necessary approvals.',
+        'Yes, under Rajasthan’s Tenancy Act, non-agriculturists can own these second-home assets, provided they obtain the necessary approvals.',
     },
     {
       question: 'What amenities are included?',

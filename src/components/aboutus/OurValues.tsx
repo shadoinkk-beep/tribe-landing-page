@@ -1,12 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { motion, Variants } from "framer-motion";
-import {
-  FaCheckSquare,
-  FaMedal,
-  FaPencilAlt,
-  FaChartLine,
-} from "react-icons/fa";
 import { MdAssuredWorkload, MdFactCheck, MdHistoryEdu, MdVerified } from "react-icons/md";
 
 interface ValueItem {
@@ -22,28 +16,28 @@ const values: ValueItem[] = [
     title: "Compliance First",
     description:
       "We begin with due diligence, not design. Every project passes layered legal checks before a single plan is drawn.",
-    color: "bg-[#4B3D1A66] text-black",
+    color: "bg-cream-deep text-brown-deep",
   },
   {
     icon: MdVerified,
     title: "Transparency Always",
     description:
       "No hidden clauses, no 'approvals in process.' We share every document, every step — so investors always know what they own.",
-    color: "bg-[#4B3D1A66] text-black",
+    color: "bg-cream-deep text-brown-deep",
   },
   {
     icon: MdHistoryEdu,
     title: "Legacy-Driven Design",
     description:
-      "We build farmhouses meant to outlive trends — rooted in soil health, sustainability, and timeless architecture.",
-    color: "bg-[#4B3D1A66] text-black",
+      "We build second homes meant to outlive trends — rooted in soil health, sustainability, and timeless architecture.",
+    color: "bg-cream-deep text-brown-deep",
   },
   {
     icon: MdAssuredWorkload,
     title: "Growth Without Compromise",
     description:
       "Our goal isn’t fast returns; it’s long-term value. We blend compliance, lifestyle, and nature into one ecosystem built to last.",
-    color: "bg-[#4B3D1A66] text-black",
+    color: "bg-cream-deep text-brown-deep",
   },
 ];
 
@@ -79,19 +73,19 @@ const OurValues: React.FC = () => {
             viewport={{ once: false, amount: 0.3 }}
           >
             <motion.h2
-              className="text-5xl lg:text-7xl font-bold mb-6 text-black leading-[1.1]"
+              className="text-5xl lg:text-7xl font-bold mb-6 text-brown-deep leading-[1.1]"
               variants={fadeUp}
             >
               Our <br /> Values
             </motion.h2>
             <motion.p
-              className="max-w-2xl text-black"
+              className="max-w-2xl text-brown"
               variants={fadeUp}
               transition={{ delay: 0.2 }}
             >
               At TRIBE, our values guide every decision — from the land we
               acquire to the lifestyle we create. Each one reflects our promise
-              to make farmhouse ownership secure, transparent, and truly
+              to make second-home ownership secure, transparent, and truly
               future-ready.
             </motion.p>
           </motion.div>
@@ -109,7 +103,7 @@ const OurValues: React.FC = () => {
                   className={`p-6 rounded-2xl shadow-lg flex flex-col justify-between transition-all duration-300 transform cursor-pointer
                     ${
                       isActive
-                        ? "bg-[#123622] text-white"
+                        ? "bg-dark text-light"
                         : `${item.color}`
                     }`}
                 >
@@ -136,9 +130,9 @@ const OurValues: React.FC = () => {
 
                     <div
                       className={`h-[1px] w-full mb-3 ${
-                        isActive || item.color.includes("text-white")
-                          ? "bg-white"
-                          : "bg-[#4B3D1A]"
+                        isActive || item.color?.includes("text-light")
+                          ? "bg-light"
+                          : "bg-dark"
                       }`}
                     />
                     <p className="text-base font-medium">{item.title}</p>

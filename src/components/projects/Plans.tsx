@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Plans = () => {
   const plans = [
@@ -18,24 +19,26 @@ const Plans = () => {
 
     <div className="container_content">
       <div className="text-center mb-12">
-        <p className="text-sm text-dark tracking-widest mb-2 side_line relative">PROJECT PLANS</p>
-        <h2 className="text-4xl font-semibold text-gray-800">Plans</h2>
+        <p className="eyebrow-copy text-dark mb-2 side_line relative">PROJECT PLANS</p>
+        <h2 className="heading-section text-brown-deep">Plans</h2>
       </div>
 
       <div className="flex flex-wrap justify-center gap-12">
         {plans.map((plan, index) => (
-          <div key={index} className="shadow-xl rounded overflow-hidden w-[300px] hover:scale-110 transition-transform duration-300">
-            <div className="relative">
-              <img
+          <div key={index} className="w-full max-w-[340px] overflow-hidden rounded-lg shadow-xl transition-transform duration-300 hover:scale-[1.03]">
+            <div className="relative h-64">
+              <Image
                 src={plan.image}
                 alt={`${plan.bhk} Plan`}
-                className="w-full h-64 object-cover blur-sm"
+                fill
+                sizes="(max-width: 768px) 90vw, 300px"
+                className="object-cover blur-sm"
               />
-              <button className="button-primary absolute inset-0 m-auto bg-[#4B3D1A] hover:bg-green-800 text-white px-4 py-2 rounded w-max h-max">
+              <button className="button-primary absolute inset-0 m-auto bg-dark hover:bg-brown-deep text-light px-4 py-2 rounded w-max h-max">
                 View Plan
               </button>
             </div>
-            <div className="bg-dark text-white text-center py-3 text-xl font-medium">
+            <div className="bg-dark text-light text-center py-3 text-xl font-medium">
               {plan.bhk}
             </div>
           </div>
